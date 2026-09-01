@@ -1,0 +1,6 @@
+{
+  "name": "Jamal Movies Studio",
+  "description": "Public movie discovery and cinema streaming platform powered by TMDB global catalog, upcoming 2026 previews, legal open-license public domain streaming, and Google Gemini AI movie concierge.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
