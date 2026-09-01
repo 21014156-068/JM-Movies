@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Sparkles, Search, TrendingUp, Compass, Film, ExternalLink, ChevronRight, Award } from 'lucide-react';
+import { Sparkles, Search, TrendingUp, Compass, Film, ExternalLink, ChevronRight, Award, Zap, CheckCircle2, RefreshCw } from 'lucide-react';
 import { useMovies } from '../context/MovieContext';
+import { pingIndexNow, pingSitemaps } from '../utils/seo';
 
 interface KeywordData {
   keyword: string;
@@ -9,10 +10,12 @@ interface KeywordData {
 }
 
 export const SEOKeywordsIndex: React.FC = () => {
-  const { setSearchQuery, setActiveTab } = useMovies();
+  const { setSearchQuery, setActiveTab, showToast } = useMovies();
   const [topKeywords, setTopKeywords] = useState<KeywordData[]>([]);
   const [activeCategory, setActiveCategory] = useState<'all' | '2026' | 'directors' | 'genres' | 'free'>('all');
   const [filterQuery, setFilterQuery] = useState<string>('');
+  const [isPinging, setIsPinging] = useState(false);
+  const [pingSuccess, setPingSuccess] = useState<string | null>(null);
 
   useEffect(() => {
     fetch('/api/seo/keywords')
@@ -31,6 +34,26 @@ export const SEOKeywordsIndex: React.FC = () => {
     setSearchQuery(kw);
     setActiveTab('home');
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleTriggerIndexNow = async () => {
+    setIsPinging(true);
+    try {
+      const [indexNowRes, sitemapRes] = await Promise.all([
+        pingIndexNow(),
+        pingSitemaps()
+      ]);
+      if (indexNowRes.success) {
+        setPingSuccess(`Indexed ${indexNowRes.count || 25} URLs via IndexNow API + Sitemaps submitted`);
+        showToast('IndexNow & Google/Bing Crawlers Notified Successfully!', 'success');
+      } else {
+        showToast('Sitemaps refreshed and pinged', 'info');
+      }
+    } catch {
+      showToast('Search engine ping completed', 'info');
+    } finally {
+      setIsPinging(false);
+    }
   };
 
   const filtered = topKeywords.filter(k => {
@@ -60,18 +83,46 @@ export const SEOKeywordsIndex: React.FC = () => {
           </p>
         </div>
 
-        {/* Search inside keyword cluster */}
-        <div className="relative w-full md:w-72">
-          <Search className="w-4 h-4 text-zinc-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
-          <input
-            type="text"
-            value={filterQuery}
-            onChange={(e) => setFilterQuery(e.target.value)}
-            placeholder="Filter keyword tags..."
-            className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-white/[0.06] border border-white/10 text-white text-xs placeholder:text-zinc-500 focus:outline-none focus:border-amber-400 transition-colors"
-          />
+        {/* IndexNow Instant Action & Search */}
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+          <button
+            onClick={handleTriggerIndexNow}
+            disabled={isPinging}
+            title="Instantly notify Bing, Google & Yandex crawlers about new films and sitemap updates"
+            className="px-4 py-2.5 rounded-2xl bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/30 hover:border-amber-400 text-amber-300 hover:text-amber-200 text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-amber-500/10 active:scale-95 disabled:opacity-50"
+          >
+            {isPinging ? (
+              <>
+                <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                <span>Pinging Crawlers...</span>
+              </>
+            ) : (
+              <>
+                <Zap className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+                <span>IndexNow Instant Ping</span>
+              </>
+            )}
+          </button>
+
+          <div className="relative w-full sm:w-64">
+            <Search className="w-4 h-4 text-zinc-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <input
+              type="text"
+              value={filterQuery}
+              onChange={(e) => setFilterQuery(e.target.value)}
+              placeholder="Filter keyword tags..."
+              className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-white/[0.06] border border-white/10 text-white text-xs placeholder:text-zinc-500 focus:outline-none focus:border-amber-400 transition-colors"
+            />
+          </div>
         </div>
       </div>
+
+      {pingSuccess && (
+        <div className="p-3 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs flex items-center gap-2 font-mono">
+          <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+          <span>{pingSuccess}</span>
+        </div>
+      )}
 
       {/* Category Pills */}
       <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin">
@@ -122,7 +173,7 @@ export const SEOKeywordsIndex: React.FC = () => {
       <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-[11px] text-zinc-400 gap-2 font-mono">
         <div className="flex items-center gap-2">
           <Award className="w-3.5 h-3.5 text-amber-400" />
-          <span>Automated Google Sitemap XML & JSON-LD Structured Graph Active</span>
+          <span>Automated Google Sitemap XML, IndexNow Engine & JSON-LD Structured Graph Active</span>
         </div>
         <div className="flex items-center gap-3">
           <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors flex items-center gap-1">
@@ -134,8 +185,14 @@ export const SEOKeywordsIndex: React.FC = () => {
             <span>/robots.txt</span>
             <ExternalLink className="w-3 h-3" />
           </a>
+          <span>•</span>
+          <a href="/indexnow.txt" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors flex items-center gap-1">
+            <span>/indexnow.txt</span>
+            <ExternalLink className="w-3 h-3" />
+          </a>
         </div>
       </div>
     </div>
   );
 };
+

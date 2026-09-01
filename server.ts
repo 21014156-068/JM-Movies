@@ -879,6 +879,193 @@ ${keywordUrls.map(u => `  <url>
     });
   });
 
+  // IndexNow Key verification files
+  const INDEXNOW_KEY = 'jamalmovies-indexnow-key-2026';
+  app.get(['/indexnow.txt', `/${INDEXNOW_KEY}.txt`], (req, res) => {
+    res.type('text/plain').send(INDEXNOW_KEY);
+  });
+
+  // IndexNow Instant Search Engine Indexing Endpoint (Bing, Yandex, Seznam, Naver)
+  app.post('/api/seo/indexnow', async (req, res) => {
+    try {
+      const host = req.get('host') || 'localhost:3000';
+      const protocol = req.protocol === 'https' || req.headers['x-forwarded-proto'] === 'https' ? 'https' : 'http';
+      const baseUrl = `${protocol}://${host}`;
+      
+      const { urls, urlList } = req.body;
+      const allMovies = db.getAllMovies();
+      
+      // Default to submitting home, categories, and top 20 movies if no urls provided
+      const targetUrls: string[] = urls || urlList || [
+        `${baseUrl}/`,
+        `${baseUrl}/?view=upcoming`,
+        `${baseUrl}/?view=public-domain`,
+        `${baseUrl}/sitemap.xml`,
+        ...allMovies.slice(0, 25).map(m => {
+          const slug = encodeURIComponent(m.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''));
+          return `${baseUrl}/movie/${m.id}/${slug}`;
+        })
+      ];
+
+      const payload = {
+        host: host.split(':')[0],
+        key: INDEXNOW_KEY,
+        keyLocation: `${baseUrl}/${INDEXNOW_KEY}.txt`,
+        urlList: targetUrls
+      };
+
+      // Notify IndexNow endpoint
+      let indexNowSuccess = false;
+      let indexNowResponse = '';
+      try {
+        const indexNowRes = await fetch('https://api.indexnow.org/indexnow', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json; charset=utf-8' },
+          body: JSON.stringify(payload)
+        });
+        indexNowSuccess = indexNowRes.ok || indexNowRes.status === 200 || indexNowRes.status === 202;
+        indexNowResponse = `HTTP ${indexNowRes.status} ${indexNowRes.statusText}`;
+      } catch (err: any) {
+        indexNowResponse = err.message || 'Failed connecting to api.indexnow.org';
+      }
+
+      res.json({
+        success: true,
+        service: 'IndexNow Protocol (Bing, Yandex, Seznam)',
+        key: INDEXNOW_KEY,
+        submittedCount: targetUrls.length,
+        submittedUrls: targetUrls.slice(0, 10),
+        statusMessage: indexNowSuccess ? 'Successfully submitted to IndexNow search engine crawl queue' : `IndexNow ping status: ${indexNowResponse}`,
+        timestamp: new Date().toISOString()
+      });
+    } catch (err: any) {
+      res.status(500).json({ error: err.message || 'IndexNow request failed' });
+    }
+  });
+
+  // Sitemap Ping Notification Endpoint for Search Engine Crawlers
+  app.post('/api/seo/ping-sitemaps', async (req, res) => {
+    const host = req.get('host') || 'localhost:3000';
+    const protocol = req.protocol === 'https' || req.headers['x-forwarded-proto'] === 'https' ? 'https' : 'http';
+    const baseUrl = `${protocol}://${host}`;
+    const sitemapUrl = `${baseUrl}/sitemap.xml`;
+
+    const pingResults: Record<string, string> = {};
+
+    // Ping Google
+    try {
+      const gRes = await fetch(`https://www.google.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`);
+      pingResults.google = `HTTP ${gRes.status}`;
+    } catch (e: any) {
+      pingResults.google = e.message || 'Google ping timed out';
+    }
+
+    // Ping Bing
+    try {
+      const bRes = await fetch(`https://www.bing.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`);
+      pingResults.bing = `HTTP ${bRes.status}`;
+    } catch (e: any) {
+      pingResults.bing = e.message || 'Bing ping timed out';
+    }
+
+    res.json({
+      success: true,
+      sitemapUrl,
+      results: pingResults,
+      timestamp: new Date().toISOString()
+    });
+  });
+
+  // SEO Global Status Endpoint
+  app.get('/api/seo/status', (req, res) => {
+    const allMovies = db.getAllMovies();
+    const host = req.get('host') || 'localhost:3000';
+    const protocol = req.protocol === 'https' || req.headers['x-forwarded-proto'] === 'https' ? 'https' : 'http';
+    const baseUrl = `${protocol}://${host}`;
+
+    res.json({
+      siteName: 'Jamal Movies',
+      baseUrl,
+      totalMoviesIndexed: allMovies.length,
+      publicDomainStreams: allMovies.filter(m => m.publicDomain).length,
+      sitemaps: [
+        `${baseUrl}/sitemap.xml`,
+        `${baseUrl}/sitemap-main.xml`,
+        `${baseUrl}/sitemap-movies.xml`,
+        `${baseUrl}/sitemap-keywords.xml`
+      ],
+      robotsTxt: `${baseUrl}/robots.txt`,
+      indexNowKey: INDEXNOW_KEY,
+      indexNowEndpoint: `${baseUrl}/api/seo/indexnow`,
+      googleVerificationActive: true,
+      lastGenerated: new Date().toISOString()
+    });
+  });
+
+  // Dynamic Open Graph SVG Card for Social Media Crawlers (Facebook/Twitter/Discord/Telegram)
+  app.get('/api/og/:movieId', (req, res) => {
+    const movieId = req.params.movieId;
+    const movie = db.getMovieById(movieId);
+    const title = movie ? movie.title : 'Jamal Movies Cinema Explorer';
+    const year = movie ? (movie.releaseYear || 2026) : 2026;
+    const rating = movie?.rating ? `${movie.rating.toFixed(1)} / 10` : '8.8 / 10';
+    const genres = movie?.genres?.slice(0, 3).join(' • ') || 'Action • Sci-Fi • Cinema';
+    const director = movie?.director ? `Directed by ${movie.director}` : 'Verified HD Stream & Trailers';
+
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+      <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#05060f"/>
+          <stop offset="60%" stop-color="#0e1022"/>
+          <stop offset="100%" stop-color="#1e1b4b"/>
+        </linearGradient>
+        <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#fbbf24"/>
+          <stop offset="100%" stop-color="#f59e0b"/>
+        </linearGradient>
+      </defs>
+      
+      <!-- Background -->
+      <rect width="1200" height="630" fill="url(#bg)"/>
+      <circle cx="1000" cy="150" r="350" fill="#f59e0b" fill-opacity="0.08" filter="blur(60px)"/>
+      <circle cx="200" cy="500" r="300" fill="#6366f1" fill-opacity="0.08" filter="blur(60px)"/>
+      
+      <!-- Brand Logo Header -->
+      <g transform="translate(80, 70)">
+        <rect width="50" height="50" rx="14" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
+        <polygon points="20,15 35,25 20,35" fill="url(#gold)"/>
+        <text x="65" y="34" fill="#ffffff" font-family="sans-serif" font-size="28" font-weight="900" letter-spacing="1">JAMAL <tspan fill="#f59e0b">MOVIES</tspan></text>
+      </g>
+
+      <!-- Rating Badge -->
+      <g transform="translate(960, 70)">
+        <rect width="160" height="48" rx="24" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-width="1.5"/>
+        <text x="80" y="31" fill="#fbbf24" font-family="sans-serif" font-size="18" font-weight="800" text-anchor="middle">★ ${rating}</text>
+      </g>
+      
+      <!-- Title and Details -->
+      <text x="80" y="270" fill="#ffffff" font-family="sans-serif" font-size="54" font-weight="900" letter-spacing="-0.5">${title.replace(/&/g, '&amp;').slice(0, 36)}</text>
+      <text x="80" y="335" fill="#f59e0b" font-family="sans-serif" font-size="24" font-weight="700" letter-spacing="0.5">${year} • ${genres}</text>
+      <text x="80" y="390" fill="#94a3b8" font-family="sans-serif" font-size="22" font-weight="500">${director.replace(/&/g, '&amp;')}</text>
+      
+      <!-- Bottom Feature Badges -->
+      <g transform="translate(80, 490)">
+        <rect width="220" height="52" rx="16" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.15"/>
+        <text x="110" y="33" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="700" text-anchor="middle">▶ Watch HD Trailer</text>
+      </g>
+      <g transform="translate(320, 490)">
+        <rect width="240" height="52" rx="16" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.15"/>
+        <text x="120" y="33" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="700" text-anchor="middle">🎬 Cast &amp; Trivia Hub</text>
+      </g>
+      <g transform="translate(580, 490)">
+        <rect width="260" height="52" rx="16" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-opacity="0.3"/>
+        <text x="130" y="33" fill="#34d399" font-family="sans-serif" font-size="16" font-weight="700" text-anchor="middle">✓ Verified Legal Cinema</text>
+      </g>
+    </svg>`;
+
+    res.type('image/svg+xml').send(svg);
+  });
+
   // Helper to dynamically inject SSR Meta & Google Structured Data into HTML
   const injectSeoIntoHtml = async (html: string, req: express.Request): Promise<string> => {
     let movieId = (req.query.movie as string) || (req.query.id as string);

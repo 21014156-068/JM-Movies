@@ -60,12 +60,43 @@ export const MovieProvider: React.FC<{ children: ReactNode }> = ({ children }) =
           if (segments[1]) {
             movieId = segments[1];
           }
+        } else if (path.startsWith('/genre/')) {
+          const segments = path.split('/').filter(Boolean);
+          if (segments[1]) {
+            const g = decodeURIComponent(segments[1]);
+            setSelectedGenre(g.charAt(0).toUpperCase() + g.slice(1));
+            setActiveTab('home');
+          }
+        } else if (path.startsWith('/year/')) {
+          const segments = path.split('/').filter(Boolean);
+          if (segments[1]) {
+            setSearchQuery(segments[1]);
+            setActiveTab('home');
+          }
+        } else if (path === '/upcoming') {
+          setActiveTab('upcoming');
+        } else if (path === '/public-domain') {
+          setActiveTab('public-domain');
+        } else if (path === '/roulette') {
+          setActiveTab('roulette');
+        } else if (path === '/battle') {
+          setActiveTab('battle');
+        } else if (path === '/trivia') {
+          setActiveTab('trivia');
         }
 
-        // 2. Check query param fallback (?movie=...)
+        // 2. Check query param fallback (?movie=..., ?genre=..., ?search=...)
+        const params = new URLSearchParams(window.location.search);
         if (!movieId) {
-          const params = new URLSearchParams(window.location.search);
           movieId = params.get('movie') || params.get('id');
+        }
+        const gParam = params.get('genre');
+        if (gParam) {
+          setSelectedGenre(gParam);
+        }
+        const sParam = params.get('search') || params.get('q');
+        if (sParam) {
+          setSearchQuery(sParam);
         }
 
         if (movieId) {
@@ -79,7 +110,7 @@ export const MovieProvider: React.FC<{ children: ReactNode }> = ({ children }) =
           }
         }
       } catch (err) {
-        console.error('Error parsing URL movie param:', err);
+        console.error('Error parsing URL state:', err);
       }
     };
 
@@ -139,6 +170,13 @@ export const MovieProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     try {
       const newUrl = slug ? `/movie/${encodeURIComponent(movieId)}/${slug}` : `/movie/${encodeURIComponent(movieId)}`;
       window.history.pushState({ movieId, tab: 'movie-detail' }, '', newUrl);
+
+      // Trigger IndexNow crawler notification in background
+      fetch('/api/seo/indexnow', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ urls: [`${window.location.origin}${newUrl}`] })
+      }).catch(() => {});
     } catch {
       // ignore
     }

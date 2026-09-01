@@ -50,6 +50,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie, showRank }) => {
           src={movie.poster}
           alt={`${movie.title} (${movie.releaseYear}) Official Movie Poster`}
           loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           referrerPolicy="no-referrer"
           onError={(e) => {

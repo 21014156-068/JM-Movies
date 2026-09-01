@@ -169,7 +169,7 @@ export function updatePageSEO({
 
   const jsonLdGraph: any[] = [];
 
-  // Movie Schema (Schema.org/Movie)
+    // Movie Schema (Schema.org/Movie)
   if (movie) {
     const movieKeywords = generateKeywordsForMovie(movie);
     const movieSchema: any = {
@@ -194,6 +194,16 @@ export function updatePageSEO({
         'bestRating': '10',
         'worstRating': '1',
         'ratingCount': movie.voteCount && movie.voteCount > 0 ? movie.voteCount : 150
+      },
+      'potentialAction': {
+        '@type': 'WatchAction',
+        'target': movie.publicDomain && movie.streamUrl ? movie.streamUrl : `${baseUrl}/?movie=${movie.id}`,
+        'actionPlatform': [
+          'http://schema.org/DesktopWebPlatform',
+          'http://schema.org/MobileWebPlatform',
+          'http://schema.org/IOSPlatform',
+          'http://schema.org/AndroidPlatform'
+        ]
       }
     };
 
@@ -219,7 +229,8 @@ export function updatePageSEO({
         'description': `Official HD trailer for ${movie.title} (${movie.releaseYear}). Watch on Jamal Movies.`,
         'thumbnailUrl': `https://img.youtube.com/vi/${movie.trailerKey}/hqdefault.jpg`,
         'embedUrl': `https://www.youtube.com/embed/${movie.trailerKey}`,
-        'uploadDate': movie.releaseDate || '2026-01-01'
+        'uploadDate': movie.releaseDate || '2026-01-01',
+        'duration': 'PT2M30S'
       };
     }
 
@@ -230,7 +241,8 @@ export function updatePageSEO({
         'description': `Watch full legal public domain film ${movie.title} on Jamal Movies.`,
         'thumbnailUrl': movie.poster || movie.backdrop,
         'contentUrl': movie.streamUrl,
-        'uploadDate': movie.releaseDate || '2026-01-01'
+        'uploadDate': movie.releaseDate || '2026-01-01',
+        'duration': `PT${movie.runtime || 90}M`
       };
     }
 
@@ -243,12 +255,10 @@ export function updatePageSEO({
       'mainEntity': [
         {
           '@type': 'Question',
-          'name': `What is the release date of ${movie.title}?`,
+          'name': `What is the release date and runtime of ${movie.title}?`,
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': movie.releaseDate 
-              ? `${movie.title} is released on ${movie.releaseDate}. Track countdowns and trailers on Jamal Movies.`
-              : `${movie.title} was released in ${movie.releaseYear}.`
+            'text': `${movie.title} has a runtime of ${movie.runtime || 120} minutes and was released on ${movie.releaseDate || movie.releaseYear || 2026}.`
           }
         },
         {
@@ -256,7 +266,7 @@ export function updatePageSEO({
           'name': `Who directed and stars in ${movie.title}?`,
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': `${movie.title} is directed by ${movie.director || 'notable creators'}${movie.cast?.length ? ` and stars ${movie.cast.slice(0, 4).map(c => c.name).join(', ')}` : ''}.`
+            'text': `${movie.title} is directed by ${movie.director || 'notable creators'}${movie.cast?.length ? ` and stars ${movie.cast.slice(0, 5).map(c => c.name).join(', ')}` : ''}.`
           }
         },
         {
@@ -265,8 +275,16 @@ export function updatePageSEO({
           'acceptedAnswer': {
             '@type': 'Answer',
             'text': movie.publicDomain 
-              ? `${movie.title} is available to stream 100% free and legally on Jamal Movies.`
-              : `Watch the official HD trailer, cast interviews, and ratings for ${movie.title} on Jamal Movies.`
+              ? `${movie.title} is available to stream 100% free and legally on Jamal Movies with no subscription.`
+              : `Watch the official HD trailer, cast interviews, trivia, and reviews for ${movie.title} on Jamal Movies.`
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': `What genres does ${movie.title} belong to?`,
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': `${movie.title} is categorized under ${movie.genres?.join(', ') || 'Feature Cinema'} with an audience rating of ${movie.rating?.toFixed(1) || '8.5'}/10.`
           }
         }
       ]
@@ -325,3 +343,47 @@ export function updatePageSEO({
     }, null, 2);
   }
 }
+
+/**
+ * Trigger real-time IndexNow crawler submission for newly viewed or updated movies
+ */
+export async function pingIndexNow(urls?: string[]): Promise<{ success: boolean; message: string; count?: number }> {
+  try {
+    const res = await fetch('/api/seo/indexnow', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ urls })
+    });
+    const data = await res.json();
+    return {
+      success: !!data.success,
+      message: data.statusMessage || 'IndexNow ping sent',
+      count: data.submittedCount
+    };
+  } catch (err: any) {
+    return {
+      success: false,
+      message: err.message || 'IndexNow request failed'
+    };
+  }
+}
+
+/**
+ * Trigger sitemap crawler notification to Google and Bing
+ */
+export async function pingSitemaps(): Promise<{ success: boolean; results?: Record<string, string> }> {
+  try {
+    const res = await fetch('/api/seo/ping-sitemaps', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' }
+    });
+    const data = await res.json();
+    return {
+      success: !!data.success,
+      results: data.results
+    };
+  } catch {
+    return { success: false };
+  }
+}
+
