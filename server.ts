@@ -708,8 +708,9 @@ Sitemap: ${baseUrl}/sitemap-keywords.xml
   });
 
   // Google Search Console Site Verification HTML Route
-  app.get(['/google5RTlUdLRSGgXvy-pOayANGe1FfpElbiLsOgtvmaxuRs.html', '/google:code.html'], (req, res) => {
-    res.type('text/html').send('google-site-verification: google5RTlUdLRSGgXvy-pOayANGe1FfpElbiLsOgtvmaxuRs.html');
+  app.get(['/googleeee2efa737591fdb.html', '/google5RTlUdLRSGgXvy-pOayANGe1FfpElbiLsOgtvmaxuRs.html', '/google:code.html'], (req, res) => {
+    const filename = req.path.replace('/', '') || 'googleeee2efa737591fdb.html';
+    res.type('text/html').send(`google-site-verification: ${filename}`);
   });
 
   // Master Sitemap Index for Google Search Console
