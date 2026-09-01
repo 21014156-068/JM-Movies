@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-1</loc>
+    <lastmod>2010-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/ljsZTbVsrQSqZgWeep2P1PDKY8m.jpg</image:loc>
+      <image:title>Inception (2010)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-2</loc>
+    <lastmod>2014-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg</image:loc>
+      <image:title>Interstellar (2014)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-3</loc>
+    <lastmod>2024-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg</image:loc>
+      <image:title>Dune: Part Two (2024)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-4</loc>
+    <lastmod>2021-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg</image:loc>
+      <image:title>Dune: Part One (2021)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-5</loc>
+    <lastmod>2017-10-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg</image:loc>
+      <image:title>Blade Runner 2049 (2017)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-6</loc>
+    <lastmod>1999-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg</image:loc>
+      <image:title>The Matrix (1999)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-7</loc>
+    <lastmod>2023-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg</image:loc>
+      <image:title>Oppenheimer (2023)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-8</loc>
+    <lastmod>1994-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg</image:loc>
+      <image:title>The Shawshank Redemption (1994)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-9</loc>
+    <lastmod>1972-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg</image:loc>
+      <image:title>The Godfather (1972)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-10</loc>
+    <lastmod>1974-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/hek3koDUyMrk7ahxPWN9PZ9nRGe.jpg</image:loc>
+      <image:title>The Godfather Part II (1974)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-11</loc>
+    <lastmod>2008-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg</image:loc>
+      <image:title>The Dark Knight (2008)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-12</loc>
+    <lastmod>1994-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg</image:loc>
+      <image:title>Pulp Fiction (1994)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-13</loc>
+    <lastmod>2019-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg</image:loc>
+      <image:title>Parasite (2019)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-14</loc>
+    <lastmod>1999-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg</image:loc>
+      <image:title>Fight Club (1999)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-15</loc>
+    <lastmod>2023-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg</image:loc>
+      <image:title>Spider-Man: Across the Spider-Verse (2023)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-16</loc>
+    <lastmod>2022-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/62HCnUTziyWcpDaBO2i1DX17ljH.jpg</image:loc>
+      <image:title>Top Gun: Maverick (2022)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-17</loc>
+    <lastmod>2022-12-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg</image:loc>
+      <image:title>Avatar: The Way of Water (2022)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-18</loc>
+    <lastmod>2023-03-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg</image:loc>
+      <image:title>John Wick: Chapter 4 (2023)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-19</loc>
+    <lastmod>2015-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/8tZYtuWezp8JbcsvHYO0O46tFbo.jpg</image:loc>
+      <image:title>Mad Max: Fury Road (2015)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-20</loc>
+    <lastmod>2000-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg</image:loc>
+      <image:title>Gladiator (2000)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-21</loc>
+    <lastmod>2019-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/pThyQovXQrw2m0s9x82twj48Jq4.jpg</image:loc>
+      <image:title>Knives Out (2019)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-22</loc>
+    <lastmod>2016-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkVJt0Rf0.jpg</image:loc>
+      <image:title>La La Land (2016)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-23</loc>
+    <lastmod>2014-02-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg</image:loc>
+      <image:title>The Grand Budapest Hotel (2014)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-24</loc>
+    <lastmod>2004-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/5MwkWH9tYHv3mV9OdYTMR5qreIz.jpg</image:loc>
+      <image:title>Eternal Sunshine of the Spotless Mind (2004)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-25</loc>
+    <lastmod>2013-12-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/eCOtqtfvn7mxGl6nfmq4b1exJRc.jpg</image:loc>
+      <image:title>Her (2013)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-26</loc>
+    <lastmod>2018-06-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/p9fmuz2Oj3HtEJHG0w8W20sQIuE.jpg</image:loc>
+      <image:title>Hereditary (2018)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-27</loc>
+    <lastmod>1980-05-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/xazWoLealQwEgqZ89MLZklLZD3k.jpg</image:loc>
+      <image:title>The Shining (1980)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-28</loc>
+    <lastmod>1991-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/uS9m8OBk1A8eM9I042bx8rTaIsP.jpg</image:loc>
+      <image:title>The Silence of the Lambs (1991)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-29</loc>
+    <lastmod>1995-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/6yoghtyTBoPmuZKiT6HG4nTwh97.jpg</image:loc>
+      <image:title>Se7en (1995)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-30</loc>
+    <lastmod>2010-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/4GDy0PHYX3VRXUtwK5ysagvkpEj.jpg</image:loc>
+      <image:title>Shutter Island (2010)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-31</loc>
+    <lastmod>2001-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg</image:loc>
+      <image:title>Spirited Away (2001)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-32</loc>
+    <lastmod>2001-12-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cDK6.jpg</image:loc>
+      <image:title>The Lord of the Rings: The Fellowship of the Ring (2001)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-33</loc>
+    <lastmod>2003-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg</image:loc>
+      <image:title>The Lord of the Rings: The Return of the King (2003)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-34</loc>
+    <lastmod>2024-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg</image:loc>
+      <image:title>Inside Out 2 (2024)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-35</loc>
+    <lastmod>1977-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg</image:loc>
+      <image:title>Star Wars: A New Hope (1977)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-36</loc>
+    <lastmod>2019-12-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/iZf0KyrE25z1sage4SYFLCCrMi9.jpg</image:loc>
+      <image:title>1917 (2019)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-1</loc>
+    <lastmod>1968-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/en/9/91/Night_of_the_Living_Dead_%281968%29_poster.jpg</image:loc>
+      <image:title>Night of the Living Dead (1968)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-2</loc>
+    <lastmod>1927-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/en/thumb/9/97/Metropolis_%28German_three-sheet_poster%29.jpg/500px-Metropolis_%28German_three-sheet_poster%29.jpg</image:loc>
+      <image:title>Metropolis (1927)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-3</loc>
+    <lastmod>1922-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/en/thumb/9/90/Nosferatu_poster_%28Albin_Grau%2C_1922%29_1.jpg/500px-Nosferatu_poster_%28Albin_Grau%2C_1922%29_1.jpg</image:loc>
+      <image:title>Nosferatu (1922)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-4</loc>
+    <lastmod>1963-12-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Charade_%281963_poster%29.jpg/500px-Charade_%281963_poster%29.jpg</image:loc>
+      <image:title>Charade (1963)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-5</loc>
+    <lastmod>1920-02-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Das_Cabinet_des_Dr._Caligari.JPG/500px-Das_Cabinet_des_Dr._Caligari.JPG</image:loc>
+      <image:title>The Cabinet of Dr. Caligari (1920)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-6</loc>
+    <lastmod>1925-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Phantom_of_the_opera_1925_poster.jpg/500px-Phantom_of_the_opera_1925_poster.jpg</image:loc>
+      <image:title>The Phantom of the Opera (1925)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-7</loc>
+    <lastmod>1959-02-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/House_on_Haunted_Hill.jpg/500px-House_on_Haunted_Hill.jpg</image:loc>
+      <image:title>House on Haunted Hill (1959)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-8</loc>
+    <lastmod>1926-12-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/The_General_%281926%29_-_Movie_Poster_2.png/500px-The_General_%281926%29_-_Movie_Poster_2.png</image:loc>
+      <image:title>The General (1926)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-9</loc>
+    <lastmod>1940-01-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/His_Girl_Friday_%281940_poster%29_crop.jpg/500px-His_Girl_Friday_%281940_poster%29_crop.jpg</image:loc>
+      <image:title>His Girl Friday (1940)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-10</loc>
+    <lastmod>1960-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/The_Little_Shop_of_Horrors_%281960%29_-_Half-Sheet_poster.webp/500px-The_Little_Shop_of_Horrors_%281960%29_-_Half-Sheet_poster.webp.png</image:loc>
+      <image:title>The Little Shop of Horrors (1960)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-11</loc>
+    <lastmod>1962-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Carnival_of_Souls_%281962_pressbook_cover%29.jpg/500px-Carnival_of_Souls_%281962_pressbook_cover%29.jpg</image:loc>
+      <image:title>Carnival of Souls (1962)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-12</loc>
+    <lastmod>1945-11-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Detour_%28poster%29.jpg/500px-Detour_%28poster%29.jpg</image:loc>
+      <image:title>Detour (1945)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-13</loc>
+    <lastmod>1925-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Gold_rush_poster.jpg/500px-Gold_rush_poster.jpg</image:loc>
+      <image:title>The Gold Rush (1925)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-14</loc>
+    <lastmod>1902-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/0/04/Le_Voyage_dans_la_lune.jpg</image:loc>
+      <image:title>A Trip to the Moon (1902)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-15</loc>
+    <lastmod>1932-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Poster_-_White_Zombie_01_Crisco_restoration.jpg/500px-Poster_-_White_Zombie_01_Crisco_restoration.jpg</image:loc>
+      <image:title>White Zombie (1932)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-16</loc>
+    <lastmod>1964-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/en/7/73/Lastmanonearth1960s.jpg</image:loc>
+      <image:title>The Last Man on Earth (1964)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-17</loc>
+    <lastmod>1946-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/The_Stranger_%281946_film_poster%29.jpg/500px-The_Stranger_%281946_film_poster%29.jpg</image:loc>
+      <image:title>The Stranger (1946)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-18</loc>
+    <lastmod>1939-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Gullivers_travel_poster_3.jpg/500px-Gullivers_travel_poster_3.jpg</image:loc>
+      <image:title>Gulliver's Travels (1939)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-19</loc>
+    <lastmod>1942-12-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/en/4/47/Sherlock_Holmes_and_the_Secret_Weapon_-_1943_-_Poster.png</image:loc>
+      <image:title>Sherlock Holmes and the Secret Weapon (1942)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-20</loc>
+    <lastmod>1949-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/D.O.A._%281950_poster%29.jpg/500px-D.O.A._%281950_poster%29.jpg</image:loc>
+      <image:title>D.O.A. (1949)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-21</loc>
+    <lastmod>1945-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Edward_G._Robinson_and_Joan_Bennett_in_%27Scarlet_Street%27%2C_1946.jpg/500px-Edward_G._Robinson_and_Joan_Bennett_in_%27Scarlet_Street%27%2C_1946.jpg</image:loc>
+      <image:title>Scarlet Street (1945)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-22</loc>
+    <lastmod>1959-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Plan_9_Alternative_poster.jpg/500px-Plan_9_Alternative_poster.jpg</image:loc>
+      <image:title>Plan 9 from Outer Space (1959)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-1</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg</image:loc>
+      <image:title>Avengers: Doomsday (2026)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-2</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg</image:loc>
+      <image:title>The Batman Part II (2026)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-3</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg</image:loc>
+      <image:title>Spider-Man: Beyond the Spider-Verse (2026)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-4</loc>
+    <lastmod>2026-12-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg</image:loc>
+      <image:title>The Mandalorian &amp; Grogu (2026)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-5</loc>
+    <lastmod>2026-12-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg</image:loc>
+      <image:title>Dune: Messiah (2026)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-6</loc>
+    <lastmod>2026-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/shrek5_poster.jpg</image:loc>
+      <image:title>Shrek 5 (2026)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-7</loc>
+    <lastmod>2027-05-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg</image:loc>
+      <image:title>Avengers: Secret Wars (2027)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-8</loc>
+    <lastmod>2027-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg</image:loc>
+      <image:title>Star Wars: Starfighter / New Jedi Order (2027)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-9</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/toystory5_poster.jpg</image:loc>
+      <image:title>Toy Story 5 (2026)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-10</loc>
+    <lastmod>2027-02-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg</image:loc>
+      <image:title>Scream 7 (2027)</image:title>
+    </image:image>
+  </url>
+</urlset>
