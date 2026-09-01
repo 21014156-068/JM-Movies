@@ -707,6 +707,11 @@ Sitemap: ${baseUrl}/sitemap-keywords.xml
     res.type('text/plain').send(robotsTxt);
   });
 
+  // Google Search Console Site Verification HTML Route
+  app.get(['/google5RTlUdLRSGgXvy-pOayANGe1FfpElbiLsOgtvmaxuRs.html', '/google:code.html'], (req, res) => {
+    res.type('text/html').send('google-site-verification: google5RTlUdLRSGgXvy-pOayANGe1FfpElbiLsOgtvmaxuRs.html');
+  });
+
   // Master Sitemap Index for Google Search Console
   app.get('/sitemap.xml', (req, res) => {
     const host = req.get('host') || 'localhost:3000';

@@ -105,15 +105,15 @@ export const Navbar: React.FC = () => {
             </div>
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="text-xl font-black tracking-wider text-white uppercase font-sans">
-                  Jamal
+                <span className="text-xl font-black tracking-wider text-amber-400 uppercase font-sans">
+                  JM
                 </span>
-                <span className="text-xl font-bold tracking-wider text-amber-400 uppercase font-sans">
-                  Cinema
+                <span className="text-xl font-black tracking-wider text-white uppercase font-sans">
+                  CINEMA
                 </span>
               </div>
               <div className="text-[9px] tracking-widest text-zinc-400 uppercase font-mono font-medium -mt-1">
-                TMDB Universe
+                Movie Universe
               </div>
             </div>
           </button>
@@ -160,32 +160,6 @@ export const Navbar: React.FC = () => {
               <span className="px-1.5 py-0.2 text-[9px] bg-amber-500/20 text-amber-300 rounded font-mono font-bold border border-amber-500/30">
                 SPIN
               </span>
-            </button>
-
-            <button
-              id="nav-link-battle"
-              onClick={() => handleNavClick('battle')}
-              className={`px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
-                activeTab === 'battle' 
-                  ? 'text-rose-300 bg-rose-500/20 border border-rose-400/40 shadow-sm' 
-                  : 'text-zinc-300 hover:text-rose-300 hover:bg-white/[0.08] border border-transparent'
-              }`}
-            >
-              <Swords className="w-4 h-4 text-rose-400" />
-              <span>Battles</span>
-            </button>
-
-            <button
-              id="nav-link-trivia"
-              onClick={() => handleNavClick('trivia')}
-              className={`px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
-                activeTab === 'trivia' 
-                  ? 'text-purple-300 bg-purple-500/20 border border-purple-400/40 shadow-sm' 
-                  : 'text-zinc-300 hover:text-purple-300 hover:bg-white/[0.08] border border-transparent'
-              }`}
-            >
-              <HelpCircle className="w-4 h-4 text-purple-400" />
-              <span>Quiz</span>
             </button>
 
             <button
@@ -381,36 +355,6 @@ export const Navbar: React.FC = () => {
             </span>
             <span className="px-2 py-0.5 text-[10px] bg-amber-500/20 text-amber-300 rounded font-mono border border-amber-500/30">
               SPIN
-            </span>
-          </button>
-
-          <button
-            onClick={() => handleNavClick('battle')}
-            className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold flex items-center justify-between transition-all ${
-              activeTab === 'battle' ? 'text-rose-400 bg-rose-400/10 border border-rose-400/20' : 'text-zinc-300 hover:bg-white/[0.04]'
-            }`}
-          >
-            <span className="flex items-center gap-2.5">
-              <Swords className="w-4 h-4 text-rose-400" />
-              <span>Movie Battles (This or That)</span>
-            </span>
-            <span className="px-2 py-0.5 text-[10px] bg-rose-500/20 text-rose-300 rounded font-mono border border-rose-500/30">
-              VOTE
-            </span>
-          </button>
-
-          <button
-            onClick={() => handleNavClick('trivia')}
-            className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold flex items-center justify-between transition-all ${
-              activeTab === 'trivia' ? 'text-purple-400 bg-purple-400/10 border border-purple-400/20' : 'text-zinc-300 hover:bg-white/[0.04]'
-            }`}
-          >
-            <span className="flex items-center gap-2.5">
-              <HelpCircle className="w-4 h-4 text-purple-400" />
-              <span>CineQuiz (Trivia Challenge)</span>
-            </span>
-            <span className="px-2 py-0.5 text-[10px] bg-purple-500/20 text-purple-300 rounded font-mono border border-purple-500/30">
-              QUIZ
             </span>
           </button>
 
