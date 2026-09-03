@@ -3,6 +3,7 @@ import { MovieProvider, useMovies } from './context/MovieContext';
 import { Navbar } from './components/Navbar';
 import { ExploreView } from './components/ExploreView';
 import { PublicDomainView } from './components/PublicDomainView';
+import { CollectionHubsView } from './components/CollectionHubsView';
 import { ComingSoonSection } from './components/ComingSoonSection';
 import { CinemaRouletteView } from './components/CinemaRouletteView';
 import { MovieBattleView } from './components/MovieBattleView';
@@ -11,7 +12,11 @@ import { MovieDetailsView } from './components/MovieDetailsView';
 import { TrailerModal } from './components/TrailerModal';
 import { PublicDomainPlayer } from './components/PublicDomainPlayer';
 import { AIConciergeModal } from './components/AIConciergeModal';
+import { WatchlistModal } from './components/WatchlistModal';
+import { KeyboardShortcutsModal } from './components/KeyboardShortcutsModal';
+import { OfflineIndicator } from './components/OfflineIndicator';
 import { Toast } from './components/Toast';
+import { DirectLinkFloatingBar } from './components/DirectLinkFloatingBar';
 import { Footer } from './components/Footer';
 import { Movie } from './types';
 import { Flame } from 'lucide-react';
@@ -92,6 +97,8 @@ const MainContent: React.FC = () => {
 
         {activeTab === 'public-domain' && <PublicDomainView />}
 
+        {activeTab === 'collections' && <CollectionHubsView />}
+
         {activeTab === 'roulette' && <CinemaRouletteView />}
 
         {activeTab === 'battle' && <MovieBattleView />}
@@ -103,7 +110,11 @@ const MainContent: React.FC = () => {
       <TrailerModal />
       <PublicDomainPlayer />
       <AIConciergeModal />
+      <WatchlistModal />
+      <KeyboardShortcutsModal />
+      <OfflineIndicator />
       <Toast />
+      <DirectLinkFloatingBar />
 
       {/* Global Footer */}
       <Footer />

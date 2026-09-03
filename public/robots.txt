@@ -1,15 +1,70 @@
-# Googlebot & Universal Search Engine Directives
+# Universal Search Engine & AI Crawler Directives
 User-agent: *
 Allow: /
 Allow: /movie/
-Allow: /trending
-Allow: /top-rated
+Allow: /genre/
+Allow: /year/
 Allow: /upcoming
-Disallow: /api/
-Disallow: /admin
+Allow: /public-domain
+Allow: /sitemap.xml
+Allow: /sitemap-main.xml
+Allow: /sitemap-movies.xml
+Allow: /sitemap-keywords.xml
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /api/movies
+Allow: /api/ai/
+Allow: /api/seo/keywords
+Disallow: /api/admin
+Disallow: /api/user/private
 
-# Master Sitemap Index
+# OpenAI Crawlers (ChatGPT browsing, SearchGPT, GPTBot)
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /api/ai/
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /llms.txt
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Perplexity AI Crawler
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# Anthropic Claude Crawlers
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google Gemini / AI Overviews & Extended
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Common Crawl (Foundation model training)
+User-agent: CCBot
+Allow: /
+
+# Master Sitemap Index & LLMs Documentation
 Sitemap: https://jmcinema-phi.vercel.app/sitemap.xml
 Sitemap: https://jmcinema-phi.vercel.app/sitemap-main.xml
 Sitemap: https://jmcinema-phi.vercel.app/sitemap-movies.xml
 Sitemap: https://jmcinema-phi.vercel.app/sitemap-keywords.xml
+LLMs-Txt: https://jmcinema-phi.vercel.app/llms.txt

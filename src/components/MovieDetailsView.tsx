@@ -24,7 +24,12 @@ import {
   Award,
   Download,
   Video,
-  CheckCircle2
+  CheckCircle2,
+  Eye,
+  EyeOff,
+  AlertTriangle,
+  ShieldCheck,
+  Radio
 } from 'lucide-react';
 import { Movie, Review } from '../types';
 import { useMovies } from '../context/MovieContext';
@@ -43,7 +48,10 @@ export const MovieDetailsView: React.FC = () => {
     setSearchQuery,
     setActiveTab: setNavTab,
     previousTab,
-    closeMovieDetails
+    closeMovieDetails,
+    watchlist,
+    toggleWatchlist,
+    isInWatchlist
   } = useMovies();
 
   const [reviews, setReviews] = useState<Review[]>([]);
@@ -51,16 +59,21 @@ export const MovieDetailsView: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'about' | 'cast' | 'reviews' | 'similar' | 'trailer'>('about');
   
   // Watchlist & Favorites Local State
-  const [isBookmarked, setIsBookmarked] = useState<boolean>(false);
+  const isBookmarked = activeMovie ? isInWatchlist(activeMovie.id) : false;
   const [isLiked, setIsLiked] = useState<boolean>(false);
   const [likeCount, setLikeCount] = useState<number>(0);
 
-  // Review Submission State
+  // Review Submission State & Spoiler Control
   const [reviewerName, setReviewerName] = useState<string>('');
   const [userRating, setUserRating] = useState<number>(9);
   const [reviewTitle, setReviewTitle] = useState<string>('');
   const [reviewComment, setReviewComment] = useState<string>('');
+  const [reviewContainsSpoiler, setReviewContainsSpoiler] = useState<boolean>(false);
   const [isSubmittingReview, setIsSubmittingReview] = useState<boolean>(false);
+
+  // Spoilers Display Mode
+  const [hideSpoilers, setHideSpoilers] = useState<boolean>(true);
+  const [revealedSpoilers, setRevealedSpoilers] = useState<{ [id: string]: boolean }>({});
 
   // Show inline trailer state
   const [showInlineTrailer, setShowInlineTrailer] = useState<boolean>(false);
@@ -72,11 +85,8 @@ export const MovieDetailsView: React.FC = () => {
     setShowInlineTrailer(false);
     setActiveTab('about');
 
-    // Check localStorage bookmarks
+    // Check localStorage favorites
     try {
-      const savedWatchlist = JSON.parse(localStorage.getItem('jamal_watchlist') || '[]');
-      setIsBookmarked(Array.isArray(savedWatchlist) && savedWatchlist.includes(activeMovie.id));
-      
       const savedLikes = JSON.parse(localStorage.getItem('jamal_favorites') || '[]');
       setIsLiked(Array.isArray(savedLikes) && savedLikes.includes(activeMovie.id));
       setLikeCount((activeMovie.voteCount || 42) + (Array.isArray(savedLikes) && savedLikes.includes(activeMovie.id) ? 1 : 0));
@@ -122,22 +132,7 @@ export const MovieDetailsView: React.FC = () => {
   }
 
   const handleToggleBookmark = () => {
-    try {
-      const savedWatchlist = JSON.parse(localStorage.getItem('jamal_watchlist') || '[]');
-      let updated: string[];
-      if (isBookmarked) {
-        updated = savedWatchlist.filter((id: string) => id !== activeMovie.id);
-        setIsBookmarked(false);
-        showToast(`Removed "${activeMovie.title}" from Watchlist`, 'info');
-      } else {
-        updated = [...savedWatchlist, activeMovie.id];
-        setIsBookmarked(true);
-        showToast(`Added "${activeMovie.title}" to your Watchlist!`, 'success');
-      }
-      localStorage.setItem('jamal_watchlist', JSON.stringify(updated));
-    } catch {
-      setIsBookmarked(!isBookmarked);
-    }
+    toggleWatchlist(activeMovie);
   };
 
   const handleToggleLike = () => {
@@ -196,7 +191,8 @@ export const MovieDetailsView: React.FC = () => {
           rating: userRating,
           title: reviewTitle.trim() || `${name}'s Review`,
           comment: reviewComment.trim(),
-          userName: name
+          userName: name,
+          containsSpoiler: reviewContainsSpoiler
         })
       });
 
@@ -205,6 +201,7 @@ export const MovieDetailsView: React.FC = () => {
         setReviews([newReview, ...reviews]);
         setReviewTitle('');
         setReviewComment('');
+        setReviewContainsSpoiler(false);
         showToast('Review submitted successfully!', 'success');
       } else {
         // Fallback local addition
@@ -217,16 +214,35 @@ export const MovieDetailsView: React.FC = () => {
           rating: userRating,
           title: reviewTitle.trim() || `${name}'s Review`,
           comment: reviewComment.trim(),
+          containsSpoiler: reviewContainsSpoiler,
           likes: 1,
           createdAt: new Date().toISOString()
         };
         setReviews([localReview, ...reviews]);
         setReviewTitle('');
         setReviewComment('');
+        setReviewContainsSpoiler(false);
         showToast('Review posted!', 'success');
       }
     } catch {
-      showToast('Error submitting review', 'error');
+      const localReview: Review = {
+        id: `rev-${Date.now()}`,
+        movieId: activeMovie.id,
+        userId: 'guest',
+        userName: name,
+        userAvatar: `https://api.dicebear.com/7.x/bottts/svg?seed=${name}`,
+        rating: userRating,
+        title: reviewTitle.trim() || `${name}'s Review`,
+        comment: reviewComment.trim(),
+        containsSpoiler: reviewContainsSpoiler,
+        likes: 1,
+        createdAt: new Date().toISOString()
+      };
+      setReviews([localReview, ...reviews]);
+      setReviewTitle('');
+      setReviewComment('');
+      setReviewContainsSpoiler(false);
+      showToast('Review posted!', 'success');
     } finally {
       setIsSubmittingReview(false);
     }
@@ -596,9 +612,204 @@ export const MovieDetailsView: React.FC = () => {
                 className="w-full h-full border-0"
               />
             </div>
+
+            {/* High-Converting Post-Trailer Action Bar */}
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3 bg-white/[0.04] p-3.5 rounded-2xl border border-white/10">
+              <div className="flex items-center gap-2 text-xs font-bold text-zinc-200">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                <span>Ready to watch full movie? Official 4K Mirrors Ready</span>
+              </div>
+              <div className="flex items-center gap-2 w-full sm:w-auto">
+                <a
+                  href={ADSTERRA_TARGETED_CHANNELS.STREAM_SERVER_1}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => openAdsterraLink(ADSTERRA_TARGETED_CHANNELS.STREAM_SERVER_1)}
+                  className="flex-1 sm:flex-initial px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-zinc-950 font-black text-xs flex items-center justify-center gap-1.5 shadow-lg shadow-amber-500/25 transition-all hover:scale-105 active:scale-95 cursor-pointer"
+                >
+                  <Zap className="w-3.5 h-3.5 fill-zinc-950" />
+                  <span>Stream 4K Full Film</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+                <a
+                  href={ADSTERRA_TARGETED_CHANNELS.FAST_DOWNLOAD_SERVER}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => openAdsterraLink(ADSTERRA_TARGETED_CHANNELS.FAST_DOWNLOAD_SERVER)}
+                  className="px-3.5 py-2 rounded-xl bg-white/[0.08] hover:bg-white/[0.16] border border-white/15 text-zinc-200 font-bold text-xs flex items-center justify-center gap-1.5 transition-all hover:scale-105 cursor-pointer"
+                >
+                  <Download className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>Download MP4</span>
+                </a>
+              </div>
+            </div>
           </div>
         </section>
       )}
+
+      {/* ULTRA HD STREAMING SERVERS & DIRECT DOWNLOAD MATRIX (Highest Converting UI Pattern) */}
+      <section className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 mt-8">
+        <div className="p-5 sm:p-6 rounded-3xl bg-gradient-to-br from-white/[0.06] via-white/[0.03] to-[#0a0d1f] border border-amber-500/30 backdrop-blur-2xl shadow-2xl space-y-4">
+          
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-white/10 pb-4">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-2xl bg-amber-500/20 text-amber-400 border border-amber-500/30 flex items-center justify-center font-black">
+                <Zap className="w-5 h-5 fill-amber-400" />
+              </div>
+              <div>
+                <h2 className="text-base sm:text-lg font-black text-white flex items-center gap-2">
+                  <span>Fast Streaming Mirrors &amp; Direct Downloads</span>
+                  <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-mono font-bold border border-emerald-500/30">
+                    ONLINE
+                  </span>
+                </h2>
+                <p className="text-xs text-zinc-400">
+                  Select your preferred high-speed server below to stream in 4K HDR or download directly.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2 text-[11px] font-mono text-zinc-300 bg-white/[0.05] px-3 py-1.5 rounded-xl border border-white/10">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Average Speed: 84 MB/s</span>
+            </div>
+          </div>
+
+          {/* 4 Multi-Server Options */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+            
+            {/* Server 1 */}
+            <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-amber-400/50 transition-all flex flex-col justify-between space-y-3 group">
+              <div className="space-y-1">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold text-amber-400 uppercase tracking-wider">
+                    Server 1 • VIP Primary
+                  </span>
+                  <span className="text-[10px] text-emerald-400 font-mono font-bold">14ms</span>
+                </div>
+                <div className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">
+                  4K Ultra HD (HDR10+)
+                </div>
+                <p className="text-[11px] text-zinc-400 leading-snug">
+                  Dolby Atmos 5.1, zero buffering, recommended for smart TVs &amp; desktops.
+                </p>
+              </div>
+
+              <a
+                href={ADSTERRA_TARGETED_CHANNELS.STREAM_SERVER_1}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => openAdsterraLink(ADSTERRA_TARGETED_CHANNELS.STREAM_SERVER_1)}
+                className="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-zinc-950 font-black text-xs flex items-center justify-center gap-1.5 shadow-md shadow-amber-500/20 transition-all hover:scale-102 active:scale-98 cursor-pointer"
+              >
+                <Play className="w-3.5 h-3.5 fill-zinc-950" />
+                <span>Stream on Server 1</span>
+                <ExternalLink className="w-3 h-3 text-zinc-950" />
+              </a>
+            </div>
+
+            {/* Server 2 */}
+            <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-purple-400/50 transition-all flex flex-col justify-between space-y-3 group">
+              <div className="space-y-1">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold text-purple-400 uppercase tracking-wider">
+                    Server 2 • Fast CDN
+                  </span>
+                  <span className="text-[10px] text-emerald-400 font-mono font-bold">19ms</span>
+                </div>
+                <div className="text-sm font-bold text-white group-hover:text-purple-300 transition-colors">
+                  1080p High Bitrate
+                </div>
+                <p className="text-[11px] text-zinc-400 leading-snug">
+                  Optimized for mobile connections &amp; tablets with adaptive bandwidth.
+                </p>
+              </div>
+
+              <a
+                href={ADSTERRA_TARGETED_CHANNELS.STREAM_SERVER_2}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => openAdsterraLink(ADSTERRA_TARGETED_CHANNELS.STREAM_SERVER_2)}
+                className="w-full py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow-md shadow-purple-600/20 transition-all hover:scale-102 active:scale-98 cursor-pointer"
+              >
+                <Radio className="w-3.5 h-3.5 text-amber-300" />
+                <span>Stream on Server 2</span>
+                <ExternalLink className="w-3 h-3 text-purple-200" />
+              </a>
+            </div>
+
+            {/* Server 3 */}
+            <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-sky-400/50 transition-all flex flex-col justify-between space-y-3 group">
+              <div className="space-y-1">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold text-sky-400 uppercase tracking-wider">
+                    Server 3 • Multi-Language
+                  </span>
+                  <span className="text-[10px] text-emerald-400 font-mono font-bold">25ms</span>
+                </div>
+                <div className="text-sm font-bold text-white group-hover:text-sky-300 transition-colors">
+                  Dual Audio &amp; Subtitles
+                </div>
+                <p className="text-[11px] text-zinc-400 leading-snug">
+                  English, Spanish, French, German audio with 30+ language subtitles.
+                </p>
+              </div>
+
+              <a
+                href={ADSTERRA_TARGETED_CHANNELS.STREAM_SERVER_3}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => openAdsterraLink(ADSTERRA_TARGETED_CHANNELS.STREAM_SERVER_3)}
+                className="w-full py-2.5 rounded-xl bg-white/[0.08] hover:bg-white/[0.16] border border-white/15 text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-all hover:scale-102 cursor-pointer"
+              >
+                <Tv className="w-3.5 h-3.5 text-sky-400" />
+                <span>Stream on Server 3</span>
+                <ExternalLink className="w-3 h-3 text-zinc-400" />
+              </a>
+            </div>
+
+            {/* Server 4: Direct Download */}
+            <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-emerald-400/50 transition-all flex flex-col justify-between space-y-3 group">
+              <div className="space-y-1">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold text-emerald-400 uppercase tracking-wider">
+                    Server 4 • Direct CDN
+                  </span>
+                  <span className="text-[10px] text-emerald-400 font-mono font-bold">1.2 Gbps</span>
+                </div>
+                <div className="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">
+                  Direct MP4 Download
+                </div>
+                <p className="text-[11px] text-zinc-400 leading-snug">
+                  Resume supported, high-speed single-click download for offline viewing.
+                </p>
+              </div>
+
+              <a
+                href={ADSTERRA_TARGETED_CHANNELS.FAST_DOWNLOAD_SERVER}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => openAdsterraLink(ADSTERRA_TARGETED_CHANNELS.FAST_DOWNLOAD_SERVER)}
+                className="w-full py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-xs flex items-center justify-center gap-1.5 shadow-md shadow-emerald-600/20 transition-all hover:scale-102 active:scale-98 cursor-pointer"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>Download Movie</span>
+                <ExternalLink className="w-3 h-3 text-emerald-200" />
+              </a>
+            </div>
+
+          </div>
+
+          <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] text-zinc-400 pt-1">
+            <span className="flex items-center gap-1.5 text-emerald-400 font-medium">
+              <ShieldCheck className="w-3.5 h-3.5" />
+              Verified secure SSL encrypted streaming mirror endpoints
+            </span>
+            <span>Compatible with Smart TV, iOS, Android, PC, Mac</span>
+          </div>
+
+        </div>
+      </section>
 
       {/* MAIN CONTENT DEEP DIVE: Multi-Tab & Sidebar Grid */}
       <section className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 mt-10">
@@ -897,6 +1108,20 @@ export const MovieDetailsView: React.FC = () => {
                       className="w-full bg-white/[0.06] border border-white/15 rounded-2xl p-4 text-sm text-white placeholder-zinc-400 focus:outline-none focus:border-amber-400 backdrop-blur-md"
                     />
 
+                    {/* Spoiler Checkbox */}
+                    <label className="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-xs text-zinc-300 cursor-pointer select-none hover:bg-white/[0.08] transition-colors">
+                      <input
+                        type="checkbox"
+                        checked={reviewContainsSpoiler}
+                        onChange={(e) => setReviewContainsSpoiler(e.target.checked)}
+                        className="rounded border-zinc-600 text-amber-500 focus:ring-amber-400 accent-amber-500 w-4 h-4 cursor-pointer"
+                      />
+                      <div className="flex items-center gap-1.5">
+                        <AlertTriangle className="w-3.5 h-3.5 text-amber-400" />
+                        <span>This review contains key plot twists, ending reveals, or spoilers</span>
+                      </div>
+                    </label>
+
                     <div className="flex justify-end">
                       <button
                         type="submit"
@@ -909,58 +1134,118 @@ export const MovieDetailsView: React.FC = () => {
                   </form>
                 </div>
 
-                {/* Reviews List */}
+                {/* Reviews List & Spoiler Shield Controls */}
                 <div className="space-y-4">
-                  <div className="text-xs font-mono uppercase tracking-widest text-zinc-400 font-bold">
-                    Community Reviews ({reviews.length})
+                  <div className="flex flex-wrap items-center justify-between gap-3 pb-2">
+                    <div className="text-xs font-mono uppercase tracking-widest text-zinc-400 font-bold">
+                      Community Reviews ({reviews.length})
+                    </div>
+
+                    {/* Global Spoiler-Free Toggle Filter */}
+                    <button
+                      type="button"
+                      onClick={() => setHideSpoilers(!hideSpoilers)}
+                      className={`flex items-center gap-2 px-3.5 py-1.5 rounded-xl border text-xs font-bold transition-all cursor-pointer ${
+                        hideSpoilers
+                          ? 'bg-emerald-500/20 border-emerald-400/50 text-emerald-300 shadow-sm'
+                          : 'bg-amber-500/20 border-amber-400/50 text-amber-300'
+                      }`}
+                      title="Toggle Spoiler Protection"
+                    >
+                      <ShieldCheck className="w-3.5 h-3.5" />
+                      <span>{hideSpoilers ? 'Spoiler Shield: Active (Hidden)' : 'Spoiler Shield: Off (Revealed)'}</span>
+                    </button>
                   </div>
 
                   {reviews.length > 0 ? (
-                    reviews.map(r => (
-                      <div key={r.id} className="p-5 rounded-3xl bg-white/[0.03] border border-white/10 backdrop-blur-xl space-y-3">
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-3">
-                            <img
-                              src={r.userAvatar || `https://api.dicebear.com/7.x/bottts/svg?seed=${r.userName}`}
-                              alt={r.userName}
-                              className="w-10 h-10 rounded-full bg-zinc-800 object-cover border border-white/15"
-                              referrerPolicy="no-referrer"
-                            />
-                            <div>
-                              <div className="text-xs font-bold text-white">{r.userName}</div>
-                              <div className="text-[10px] text-zinc-400">
-                                {new Date(r.createdAt).toLocaleDateString()}
+                    reviews.map(r => {
+                      const isSpoilerHidden = r.containsSpoiler && hideSpoilers && !revealedSpoilers[r.id];
+
+                      return (
+                        <div key={r.id} className="p-5 rounded-3xl bg-white/[0.03] border border-white/10 backdrop-blur-xl space-y-3">
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-3">
+                              <img
+                                src={r.userAvatar || `https://api.dicebear.com/7.x/bottts/svg?seed=${r.userName}`}
+                                alt={r.userName}
+                                className="w-10 h-10 rounded-full bg-zinc-800 object-cover border border-white/15"
+                                referrerPolicy="no-referrer"
+                              />
+                              <div>
+                                <div className="flex items-center gap-2">
+                                  <span className="text-xs font-bold text-white">{r.userName}</span>
+                                  {r.containsSpoiler && (
+                                    <span className="px-2 py-0.5 rounded-md bg-rose-500/20 border border-rose-500/30 text-rose-300 text-[10px] font-bold flex items-center gap-1">
+                                      <AlertTriangle className="w-2.5 h-2.5" />
+                                      Spoiler
+                                    </span>
+                                  )}
+                                </div>
+                                <div className="text-[10px] text-zinc-400">
+                                  {new Date(r.createdAt).toLocaleDateString()}
+                                </div>
                               </div>
+                            </div>
+
+                            <div className="flex items-center gap-1.5 px-3 py-1 rounded-xl bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-bold backdrop-blur-md">
+                              <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                              <span>{r.rating} / 10</span>
                             </div>
                           </div>
 
-                          <div className="flex items-center gap-1.5 px-3 py-1 rounded-xl bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-bold backdrop-blur-md">
-                            <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                            <span>{r.rating} / 10</span>
+                          {r.title && (
+                            <div className="text-sm font-bold text-zinc-100">
+                              {r.title}
+                            </div>
+                          )}
+
+                          {/* Review Content with Spoiler Shield */}
+                          {isSpoilerHidden ? (
+                            <div className="relative overflow-hidden rounded-2xl p-4 bg-rose-500/[0.08] border border-rose-500/20 text-center space-y-2">
+                              <div className="flex items-center justify-center gap-1.5 text-xs font-bold text-rose-300">
+                                <AlertTriangle className="w-4 h-4 text-rose-400" />
+                                <span>Contains Spoilers</span>
+                              </div>
+                              <p className="text-[11px] text-zinc-400">
+                                This review discusses key ending twists or plot points.
+                              </p>
+                              <button
+                                onClick={() => setRevealedSpoilers(prev => ({ ...prev, [r.id]: true }))}
+                                className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition-all cursor-pointer"
+                              >
+                                <Eye className="w-3.5 h-3.5 text-amber-400" />
+                                <span>Reveal Review</span>
+                              </button>
+                            </div>
+                          ) : (
+                            <div className="space-y-1.5">
+                              <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                                {r.comment}
+                              </p>
+                              {r.containsSpoiler && (
+                                <button
+                                  onClick={() => setRevealedSpoilers(prev => ({ ...prev, [r.id]: false }))}
+                                  className="text-[10px] text-zinc-400 hover:text-zinc-200 flex items-center gap-1 cursor-pointer pt-1"
+                                >
+                                  <EyeOff className="w-3 h-3" />
+                                  <span>Hide spoiler</span>
+                                </button>
+                              )}
+                            </div>
+                          )}
+
+                          <div className="flex items-center justify-between pt-2 text-xs text-zinc-400 border-t border-white/10">
+                            <button
+                              onClick={() => handleLikeReview(r.id)}
+                              className="flex items-center gap-1.5 text-xs hover:text-amber-400 transition-colors cursor-pointer"
+                            >
+                              <ThumbsUp className="w-4 h-4" />
+                              <span>Helpful Review ({r.likes || 0})</span>
+                            </button>
                           </div>
                         </div>
-
-                        {r.title && (
-                          <div className="text-sm font-bold text-zinc-100">
-                            {r.title}
-                          </div>
-                        )}
-
-                        <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
-                          {r.comment}
-                        </p>
-
-                        <div className="flex items-center justify-between pt-2 text-xs text-zinc-400 border-t border-white/10">
-                          <button
-                            onClick={() => handleLikeReview(r.id)}
-                            className="flex items-center gap-1.5 text-xs hover:text-amber-400 transition-colors cursor-pointer"
-                          >
-                            <ThumbsUp className="w-4 h-4" />
-                            <span>Helpful Review ({r.likes || 0})</span>
-                          </button>
-                        </div>
-                      </div>
-                    ))
+                      );
+                    })
                   ) : (
                     <div className="p-10 text-center text-xs text-zinc-400 bg-white/[0.03] rounded-3xl border border-white/10 backdrop-blur-xl">
                       No reviews submitted yet. Be the first to share your thoughts on this title!
@@ -1008,32 +1293,81 @@ export const MovieDetailsView: React.FC = () => {
             
             {/* Where to Watch & Streaming Hub */}
             <div className="p-6 rounded-3xl bg-gradient-to-br from-[#0e122b] to-[#0a0d1f] border border-white/15 backdrop-blur-2xl shadow-2xl space-y-4">
-              <h3 className="text-xs font-mono uppercase tracking-widest text-amber-400 font-bold flex items-center gap-2">
-                <Zap className="w-4 h-4 fill-amber-400" />
-                <span>Streaming & Download Hub</span>
-              </h3>
+              <div className="flex items-center justify-between">
+                <h3 className="text-xs font-mono uppercase tracking-widest text-amber-400 font-bold flex items-center gap-2">
+                  <Zap className="w-4 h-4 fill-amber-400" />
+                  <span>Where To Watch & Stream</span>
+                </h3>
+                <span className="px-2 py-0.5 rounded-lg bg-emerald-500/20 text-emerald-300 font-mono text-[10px] border border-emerald-500/30">
+                  Verified
+                </span>
+              </div>
 
-              <div className="space-y-2.5">
+              {/* Service Matrix */}
+              <div className="space-y-2 text-xs">
                 {activeMovie.publicDomain ? (
-                  <button
-                    onClick={() => setStreamingMovie(activeMovie)}
-                    className="w-full p-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white font-black text-xs sm:text-sm flex items-center justify-between shadow-lg transition-all hover:scale-102 active:scale-98 cursor-pointer"
-                  >
-                    <div className="flex items-center gap-2">
-                      <Tv className="w-4 h-4" />
-                      <span>Legal Free Stream</span>
+                  <div className="p-3 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-between">
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+                        <Tv className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-white text-xs">Jamal Free Cinema</div>
+                        <div className="text-[10px] text-emerald-300">100% Free & Legal Stream</div>
+                      </div>
                     </div>
-                    <span className="text-[10px] bg-black/30 px-2 py-0.5 rounded-lg font-mono">SERVER 1</span>
-                  </button>
-                ) : null}
+                    <button
+                      onClick={() => setStreamingMovie(activeMovie)}
+                      className="px-3 py-1.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-black text-xs transition-colors cursor-pointer"
+                    >
+                      Watch Free
+                    </button>
+                  </div>
+                ) : (
+                  <div className="p-3 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-between">
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
+                        <Film className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-white text-xs">Theatrical & Digital</div>
+                        <div className="text-[10px] text-zinc-400">Cinemas / Premium VOD</div>
+                      </div>
+                    </div>
+                    <span className="text-[10px] font-mono text-amber-400 font-semibold">In Catalogs</span>
+                  </div>
+                )}
 
+                {activeMovie.trailerUrl && (
+                  <div className="p-3 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-between">
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-8 h-8 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold">
+                        <Play className="w-4 h-4 fill-current" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-white text-xs">Official 4K Trailer</div>
+                        <div className="text-[10px] text-zinc-400">Full Audio & HD Visuals</div>
+                      </div>
+                    </div>
+                    <button
+                      onClick={() => setTrailerMovie(activeMovie)}
+                      className="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs transition-colors cursor-pointer"
+                    >
+                      Play Preview
+                    </button>
+                  </div>
+                )}
+              </div>
+
+              {/* Streaming Links */}
+              <div className="space-y-2.5 pt-2 border-t border-white/10">
                 {/* Sponsored Server 2 4K Stream Link */}
                 <a
                   href={ADSTERRA_TARGETED_CHANNELS.NAVBAR_VIP_STREAM}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => openAdsterraLink(ADSTERRA_TARGETED_CHANNELS.NAVBAR_VIP_STREAM)}
-                  className="w-full p-3.5 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-xs sm:text-sm flex items-center justify-between shadow-lg transition-all hover:scale-102 active:scale-98 cursor-pointer"
+                  className="w-full p-3 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-xs flex items-center justify-between shadow-lg transition-all hover:scale-102 active:scale-98 cursor-pointer"
                 >
                   <div className="flex items-center gap-2">
                     <Zap className="w-4 h-4 text-amber-300 fill-amber-300" />
@@ -1048,7 +1382,7 @@ export const MovieDetailsView: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => openAdsterraLink(ADSTERRA_TARGETED_CHANNELS.FAST_DOWNLOAD_SERVER)}
-                  className="w-full p-3.5 rounded-2xl bg-white/[0.06] hover:bg-white/[0.12] border border-white/15 text-zinc-200 font-bold text-xs sm:text-sm flex items-center justify-between transition-all hover:scale-102 cursor-pointer"
+                  className="w-full p-3 rounded-2xl bg-white/[0.06] hover:bg-white/[0.12] border border-white/15 text-zinc-200 font-bold text-xs flex items-center justify-between transition-all hover:scale-102 cursor-pointer"
                 >
                   <div className="flex items-center gap-2">
                     <Download className="w-4 h-4 text-emerald-400" />

@@ -1,0 +1,756 @@
+# Jamal Movies — Full Cinema Knowledge Base for Large Language Models
+Generated: 2026-09-03
+Base URL: https://jmcinema-phi.vercel.app
+Total Movies: 68
+
+Jamal Movies provides legal free streaming for public domain cinema, official HD trailers, upcoming 2026/2027 release dates, cast credits, and movie trivia.
+
+---
+
+### Inception (2010)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-1/inception
+- **Rating**: 8.8 / 10 (36200 votes)
+- **Genres**: Science Fiction, Action, Adventure
+- **Director**: Christopher Nolan
+- **Runtime**: 148 minutes
+- **Release Date**: 2010-07-15
+- **Lead Cast**: Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Cobb, a skilled thief who steals corporate secrets through the use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.
+
+### Interstellar (2014)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-2/interstellar
+- **Rating**: 8.7 / 10 (34100 votes)
+- **Genres**: Science Fiction, Drama, Adventure
+- **Director**: Christopher Nolan
+- **Runtime**: 169 minutes
+- **Release Date**: 2014-11-05
+- **Lead Cast**: Matthew McConaughey, Anne Hathaway, Jessica Chastain
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.
+
+### Dune: Part Two (2024)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-3/dune-part-two
+- **Rating**: 8.5 / 10 (6200 votes)
+- **Genres**: Science Fiction, Adventure, Action
+- **Director**: Denis Villeneuve
+- **Runtime**: 166 minutes
+- **Release Date**: 2024-02-27
+- **Lead Cast**: Timothée Chalamet, Zendaya, Rebecca Ferguson, Austin Butler
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Follow the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a path of revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the known universe, Paul endeavors to prevent a terrible future only he can foresee.
+
+### Dune: Part One (2021)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-4/dune-part-one
+- **Rating**: 8.0 / 10 (11500 votes)
+- **Genres**: Science Fiction, Adventure
+- **Director**: Denis Villeneuve
+- **Runtime**: 155 minutes
+- **Release Date**: 2021-09-15
+- **Lead Cast**: Timothée Chalamet, Oscar Isaac
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people.
+
+### Blade Runner 2049 (2017)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-5/blade-runner-2049
+- **Rating**: 8.1 / 10 (13200 votes)
+- **Genres**: Science Fiction, Mystery, Drama
+- **Director**: Denis Villeneuve
+- **Runtime**: 164 minutes
+- **Release Date**: 2017-10-04
+- **Lead Cast**: Ryan Gosling, Harrison Ford, Ana de Armas
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Thirty years after the events of the first film, a new blade runner, LAPD Officer K, unearths a long-buried secret that has the potential to plunge what's left of society into chaos. K's discovery leads him on a quest to find Rick Deckard, a former LAPD blade runner who has been missing for 30 years.
+
+### The Matrix (1999)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-6/the-matrix
+- **Rating**: 8.2 / 10 (25100 votes)
+- **Genres**: Action, Science Fiction
+- **Director**: Lana Wachowski, Lilly Wachowski
+- **Runtime**: 136 minutes
+- **Release Date**: 1999-03-30
+- **Lead Cast**: Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.
+
+### Oppenheimer (2023)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-7/oppenheimer
+- **Rating**: 8.6 / 10 (10100 votes)
+- **Genres**: Drama, History, Biography
+- **Director**: Christopher Nolan
+- **Runtime**: 180 minutes
+- **Release Date**: 2023-07-19
+- **Lead Cast**: Cillian Murphy, Emily Blunt, Robert Downey Jr.
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: The story of J. Robert Oppenheimer’s role in the development of the atomic bomb during World War II and the intense political aftermath of his triumph.
+
+### The Shawshank Redemption (1994)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-8/the-shawshank-redemption
+- **Rating**: 8.7 / 10 (26800 votes)
+- **Genres**: Drama, Crime
+- **Director**: Frank Darabont
+- **Runtime**: 142 minutes
+- **Release Date**: 1994-09-23
+- **Lead Cast**: Tim Robbins, Morgan Freeman
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden.
+
+### The Godfather (1972)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-9/the-godfather
+- **Rating**: 8.7 / 10 (19900 votes)
+- **Genres**: Drama, Crime
+- **Director**: Francis Ford Coppola
+- **Runtime**: 175 minutes
+- **Release Date**: 1972-03-14
+- **Lead Cast**: Marlon Brando, Al Pacino, James Caan
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers.
+
+### The Godfather Part II (1974)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-10/the-godfather-part-ii
+- **Rating**: 8.6 / 10 (12500 votes)
+- **Genres**: Drama, Crime
+- **Director**: Francis Ford Coppola
+- **Runtime**: 202 minutes
+- **Release Date**: 1974-12-20
+- **Lead Cast**: Al Pacino, Robert De Niro
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: In the continuing saga of the Corleone crime family, a young Vito Corleone grows up in Sicily and in 1910s New York. In the 1950s, Michael Corleone attempts to expand the family business into Las Vegas, Hollywood and Cuba.
+
+### The Dark Knight (2008)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-11/the-dark-knight
+- **Rating**: 8.5 / 10 (32000 votes)
+- **Genres**: Drama, Action, Crime, Thriller
+- **Director**: Christopher Nolan
+- **Runtime**: 152 minutes
+- **Release Date**: 2008-07-16
+- **Lead Cast**: Christian Bale, Heath Ledger, Aaron Eckhart, Gary Oldman
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.
+
+### Pulp Fiction (1994)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-12/pulp-fiction
+- **Rating**: 8.5 / 10 (27500 votes)
+- **Genres**: Thriller, Crime, Comedy
+- **Director**: Quentin Tarantino
+- **Runtime**: 154 minutes
+- **Release Date**: 1994-09-10
+- **Lead Cast**: John Travolta, Samuel L. Jackson, Uma Thurman
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time.
+
+### Parasite (2019)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-13/parasite
+- **Rating**: 8.5 / 10 (18100 votes)
+- **Genres**: Comedy, Thriller, Drama
+- **Director**: Bong Joon-ho
+- **Runtime**: 132 minutes
+- **Release Date**: 2019-05-30
+- **Lead Cast**: Song Kang-ho, Lee Sun-kyun, Cho Yeo-jeong
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident.
+
+### Fight Club (1999)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-14/fight-club
+- **Rating**: 8.4 / 10 (29000 votes)
+- **Genres**: Drama, Thriller
+- **Director**: David Fincher
+- **Runtime**: 139 minutes
+- **Release Date**: 1999-10-15
+- **Lead Cast**: Edward Norton, Brad Pitt, Helena Bonham Carter
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground "fight clubs" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.
+
+### Spider-Man: Across the Spider-Verse (2023)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-15/spider-man-across-the-spider-verse
+- **Rating**: 8.4 / 10 (7100 votes)
+- **Genres**: Animation, Action, Adventure, Science Fiction
+- **Director**: Joaquim Dos Santos, Kemp Powers, Justin K. Thompson
+- **Runtime**: 140 minutes
+- **Release Date**: 2023-05-31
+- **Lead Cast**: Shameik Moore, Hailee Steinfeld, Oscar Isaac
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: After reuniting with Gwen Stacy, Brooklyn’s full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters the Spider-Society, a team of Spider-People charged with protecting the Multiverse’s very existence. But when the heroes clash on how to handle a new threat, Miles finds himself pitted against the other Spiders.
+
+### Top Gun: Maverick (2022)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-16/top-gun-maverick
+- **Rating**: 8.3 / 10 (9200 votes)
+- **Genres**: Action, Drama
+- **Director**: Joseph Kosinski
+- **Runtime**: 131 minutes
+- **Release Date**: 2022-05-24
+- **Lead Cast**: Tom Cruise, Miles Teller, Jennifer Connelly
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: After more than thirty years of service as one of the Navy’s top aviators, Pete “Maverick” Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.
+
+### Avatar: The Way of Water (2022)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-17/avatar-the-way-of-water
+- **Rating**: 7.7 / 10 (11800 votes)
+- **Genres**: Science Fiction, Adventure, Action
+- **Director**: James Cameron
+- **Runtime**: 192 minutes
+- **Release Date**: 2022-12-14
+- **Lead Cast**: Sam Worthington, Zoe Saldaña
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.
+
+### John Wick: Chapter 4 (2023)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-18/john-wick-chapter-4
+- **Rating**: 7.8 / 10 (6800 votes)
+- **Genres**: Action, Thriller, Crime
+- **Director**: Chad Stahelski
+- **Runtime**: 169 minutes
+- **Release Date**: 2023-03-22
+- **Lead Cast**: Keanu Reeves, Donnie Yen, Bill Skarsgård
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: With the price on his head ever increasing, John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.
+
+### Mad Max: Fury Road (2015)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-19/mad-max-fury-road
+- **Rating**: 7.6 / 10 (22100 votes)
+- **Genres**: Action, Adventure, Science Fiction
+- **Director**: George Miller
+- **Runtime**: 120 minutes
+- **Release Date**: 2015-05-13
+- **Lead Cast**: Tom Hardy, Charlize Theron
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: An apocalyptic story set in the furthest reaches of our planet, in a stark desert landscape where humanity is broken, and most everyone is crazed fighting for the necessities of life. Within this world exist two rebels on the run who just might be able to restore order.
+
+### Gladiator (2000)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-20/gladiator
+- **Rating**: 8.2 / 10 (18900 votes)
+- **Genres**: Action, Drama, Adventure
+- **Director**: Ridley Scott
+- **Runtime**: 155 minutes
+- **Release Date**: 2000-05-04
+- **Lead Cast**: Russell Crowe, Joaquin Phoenix
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: In the year 180, the death of emperor Marcus Aurelius throws the Roman Empire into turmoil. Maximus, one of the Roman army's most capable generals, is stripped of his rank, family and freedom to become a gladiator in the Colosseum.
+
+### Knives Out (2019)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-21/knives-out
+- **Rating**: 7.9 / 10 (12200 votes)
+- **Genres**: Comedy, Mystery, Crime
+- **Director**: Rian Johnson
+- **Runtime**: 130 minutes
+- **Release Date**: 2019-11-27
+- **Lead Cast**: Daniel Craig, Ana de Armas, Chris Evans
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: When renowned crime novelist Harlan Thrombey is found dead at his estate just after his 85th birthday, the inquisitive and debonair Detective Benoit Blanc is mysteriously enlisted to investigate. From Harlan's dysfunctional family to his devoted staff, Blanc sifts through a web of red herrings and self-serving lies to uncover the truth behind Harlan's untimely death.
+
+### La La Land (2016)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-22/la-la-land
+- **Rating**: 7.9 / 10 (16400 votes)
+- **Genres**: Comedy, Drama, Romance, Music
+- **Director**: Damien Chazelle
+- **Runtime**: 128 minutes
+- **Release Date**: 2016-11-29
+- **Lead Cast**: Ryan Gosling, Emma Stone
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Mia, an aspiring actress, serves lattes to movie stars in between auditions and Sebastian, a jazz musician, scrapes by playing cocktail party gigs in dingy bars, but as success mounts they are faced with decisions that begin to fray the fragile fabric of their love affair, and the dreams they worked so hard to maintain in each other threaten to rip them apart.
+
+### The Grand Budapest Hotel (2014)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-23/the-grand-budapest-hotel
+- **Rating**: 8.0 / 10 (14500 votes)
+- **Genres**: Comedy, Drama
+- **Director**: Wes Anderson
+- **Runtime**: 99 minutes
+- **Release Date**: 2014-02-26
+- **Lead Cast**: Ralph Fiennes, Tony Revolori
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: The Grand Budapest Hotel tells of a legendary concierge at a famous European hotel between the wars and his friendship with a young employee who becomes his trusted protégé.
+
+### Eternal Sunshine of the Spotless Mind (2004)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-24/eternal-sunshine-of-the-spotless-mind
+- **Rating**: 8.1 / 10 (14800 votes)
+- **Genres**: Science Fiction, Drama, Romance
+- **Director**: Michel Gondry
+- **Runtime**: 108 minutes
+- **Release Date**: 2004-03-19
+- **Lead Cast**: Jim Carrey, Kate Winslet
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Joel Barish, heartbroken that his girlfriend Clementine underwent a procedure to erase him from her memory, decides to do the same. However, as he watches his memories of her fade away, he realizes he still loves her, and may be too late to correct his mistake.
+
+### Her (2013)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-25/her
+- **Rating**: 7.9 / 10 (14100 votes)
+- **Genres**: Romance, Science Fiction, Drama
+- **Director**: Spike Jonze
+- **Runtime**: 126 minutes
+- **Release Date**: 2013-12-18
+- **Lead Cast**: Joaquin Phoenix, Scarlett Johansson
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: In a near future Los Angeles, Theodore Twombly, a soulful and complex man who earns his living writing touching letters for other people, becomes fascinated by a newly developed operating system designed to meet his every need.
+
+### Hereditary (2018)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-26/hereditary
+- **Rating**: 7.3 / 10 (7400 votes)
+- **Genres**: Horror, Mystery, Drama
+- **Director**: Ari Aster
+- **Runtime**: 127 minutes
+- **Release Date**: 2018-06-07
+- **Lead Cast**: Toni Collette, Alex Wolff
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: When Ellen, the matriarch of the Graham family, passes away, her daughter’s family begins to unravel cryptic and increasingly terrifying secrets about their ancestry. The more they discover, the more they find themselves trying to outrun the sinister fate they seem to have inherited.
+
+### The Shining (1980)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-27/the-shining
+- **Rating**: 8.2 / 10 (17200 votes)
+- **Genres**: Horror, Thriller
+- **Director**: Stanley Kubrick
+- **Runtime**: 144 minutes
+- **Release Date**: 1980-05-23
+- **Lead Cast**: Jack Nicholson, Shelley Duvall
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Jack Torrance accepts a caretaker job at the Overlook Hotel, where he, along with his wife Wendy and their son Danny, must live isolated from the rest of the world for the winter. But they aren't prepared for the madness that lurks within.
+
+### The Silence of the Lambs (1991)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-28/the-silence-of-the-lambs
+- **Rating**: 8.3 / 10 (16100 votes)
+- **Genres**: Crime, Drama, Thriller, Horror
+- **Director**: Jonathan Demme
+- **Runtime**: 118 minutes
+- **Release Date**: 1991-02-14
+- **Lead Cast**: Jodie Foster, Anthony Hopkins
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Clarice Starling is a top student at the FBI's training academy. Jack Crawford wants Clarice to interview Dr. Hannibal Lecter, a brilliant psychiatrist who is also a violent psychopath, serving life behind bars for various acts of murder and cannibalism.
+
+### Se7en (1995)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-29/se7en
+- **Rating**: 8.4 / 10 (20400 votes)
+- **Genres**: Crime, Mystery, Thriller
+- **Director**: David Fincher
+- **Runtime**: 127 minutes
+- **Release Date**: 1995-09-22
+- **Lead Cast**: Brad Pitt, Morgan Freeman
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Two homicide detectives are on a desperate hunt for a serial killer whose crimes are based on the "seven deadly sins" in this dark and haunting film that takes viewers from the tortured remains of one victim to the next.
+
+### Shutter Island (2010)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-30/shutter-island
+- **Rating**: 8.2 / 10 (23100 votes)
+- **Genres**: Drama, Thriller, Mystery
+- **Director**: Martin Scorsese
+- **Runtime**: 138 minutes
+- **Release Date**: 2010-02-18
+- **Lead Cast**: Leonardo DiCaprio, Mark Ruffalo, Ben Kingsley
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: World War II soldier-turned-U.S. Marshal Teddy Daniels investigates the disappearance of a patient from Boston's Shutter Island Ashecliffe Hospital for the criminally insane.
+
+### Spirited Away (2001)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-31/spirited-away
+- **Rating**: 8.5 / 10 (16200 votes)
+- **Genres**: Animation, Family, Fantasy
+- **Director**: Hayao Miyazaki
+- **Runtime**: 125 minutes
+- **Release Date**: 2001-07-20
+- **Lead Cast**: Rumi Hiiragi, Miyu Irino
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family.
+
+### The Lord of the Rings: The Fellowship of the Ring (2001)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-32/the-lord-of-the-rings-the-fellowship-of-the-ring
+- **Rating**: 8.4 / 10 (24700 votes)
+- **Genres**: Adventure, Fantasy, Action
+- **Director**: Peter Jackson
+- **Runtime**: 178 minutes
+- **Release Date**: 2001-12-18
+- **Lead Cast**: Elijah Wood, Ian McKellen, Viggo Mortensen
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home behind in order to begin an epic journey to the cracks of doom with eight companions to destroy the One Ring and the dark lord Sauron.
+
+### The Lord of the Rings: The Return of the King (2003)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-33/the-lord-of-the-rings-the-return-of-the-king
+- **Rating**: 8.5 / 10 (23600 votes)
+- **Genres**: Adventure, Fantasy, Action
+- **Director**: Peter Jackson
+- **Runtime**: 201 minutes
+- **Release Date**: 2003-12-01
+- **Lead Cast**: Elijah Wood, Viggo Mortensen
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Aragorn is revealed as the heir to the ancient kings as he, Gandalf and the other members of the broken fellowship struggle to save Gondor from Sauron's forces. Meanwhile, Frodo and Sam bring the ring closer to the heart of Mordor.
+
+### Inside Out 2 (2024)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-34/inside-out-2
+- **Rating**: 7.6 / 10 (4800 votes)
+- **Genres**: Animation, Family, Adventure, Comedy
+- **Director**: Kelsey Mann
+- **Runtime**: 96 minutes
+- **Release Date**: 2024-06-11
+- **Lead Cast**: Amy Poehler, Maya Hawke
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Teenager Riley's mind headquarters is undergoing a sudden demolition to make room for something entirely unexpected: new Emotions! Joy, Sadness, Anger, Fear and Disgust, who’ve long been running a successful operation by all accounts, aren’t sure how to feel when Anxiety shows up.
+
+### Star Wars: A New Hope (1977)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-35/star-wars-a-new-hope
+- **Rating**: 8.2 / 10 (20100 votes)
+- **Genres**: Adventure, Action, Science Fiction
+- **Director**: George Lucas
+- **Runtime**: 121 minutes
+- **Release Date**: 1977-05-25
+- **Lead Cast**: Mark Hamill, Harrison Ford, Carrie Fisher
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore freedom and justice in the Galaxy.
+
+### 1917 (2019)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-36/1917
+- **Rating**: 8.0 / 10 (12100 votes)
+- **Genres**: War, Action, Drama, History
+- **Director**: Sam Mendes
+- **Runtime**: 119 minutes
+- **Release Date**: 2019-12-25
+- **Lead Cast**: George MacKay, Dean-Charles Chapman
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: At the height of the First World War, two young British soldiers, Schofield and Blake are given a seemingly impossible mission. In a race against time, they must cross enemy territory and deliver a message that will stop a deadly attack on hundreds of soldiers.
+
+### Night of the Living Dead (1968)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-1/night-of-the-living-dead
+- **Rating**: 7.6 / 10 (2450 votes)
+- **Genres**: Horror, Mystery
+- **Director**: George A. Romero
+- **Runtime**: 96 minutes
+- **Release Date**: 1968-10-01
+- **Lead Cast**: Duane Jones, Judith O'Dea
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: A ragtag group of Pennsylvanians barricade themselves in an old farmhouse to remain safe from a bloodthirsty, flesh-eating breed of monsters who are ravaging the Northeast United States. The landmark zombie film that launched modern horror cinema.
+
+### Metropolis (1927)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-2/metropolis
+- **Rating**: 8.2 / 10 (2600 votes)
+- **Genres**: Science Fiction, Drama
+- **Director**: Fritz Lang
+- **Runtime**: 153 minutes
+- **Release Date**: 1927-01-10
+- **Lead Cast**: Alfred Abel, Brigitte Helm
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: In a futuristic city sharply divided between the working class and the city planners, the son of the city's mastermind falls in love with a working class prophet who predicts the coming of a savior to mediate their differences.
+
+### Nosferatu (1922)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-3/nosferatu
+- **Rating**: 7.7 / 10 (1800 votes)
+- **Genres**: Horror, Fantasy
+- **Director**: F.W. Murnau
+- **Runtime**: 94 minutes
+- **Release Date**: 1922-03-04
+- **Lead Cast**: Max Schreck
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: Vampire Count Orlok expresses interest in a new residence and real estate agent Hutter's wife in this unauthorized adaptation of Bram Stoker’s Dracula.
+
+### Charade (1963)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-4/charade
+- **Rating**: 7.8 / 10 (1200 votes)
+- **Genres**: Comedy, Mystery, Romance, Thriller
+- **Director**: Stanley Donen
+- **Runtime**: 113 minutes
+- **Release Date**: 1963-12-05
+- **Lead Cast**: Cary Grant, Audrey Hepburn
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: After her husband is murdered in Paris, Reggie Lambert finds herself in deadly jeopardy as three sinister men and a suave stranger attempt to claim the quarter of a million dollars her husband stole during WWII.
+
+### The Cabinet of Dr. Caligari (1920)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-5/the-cabinet-of-dr-caligari
+- **Rating**: 8.0 / 10 (1650 votes)
+- **Genres**: Horror, Mystery, Crime, Thriller
+- **Director**: Robert Wiene
+- **Runtime**: 77 minutes
+- **Release Date**: 1920-02-26
+- **Lead Cast**: Werner Krauss, Conrad Veidt
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: Francis, a young man, recalls in his memory the horrible experiences he and his fiancée Jane recently went through. In a German town, a hypnotist uses a somnambulist to commit murders.
+
+### The Phantom of the Opera (1925)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-6/the-phantom-of-the-opera
+- **Rating**: 7.6 / 10 (950 votes)
+- **Genres**: Horror, Mystery, Music
+- **Director**: Rupert Julian
+- **Runtime**: 93 minutes
+- **Release Date**: 1925-11-15
+- **Lead Cast**: Lon Chaney, Mary Philbin
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: A disfigured musical genius who haunts the Paris Opera House falls in love with the innocent singer Christine Daaé and terrorizes the opera management to elevate her career.
+
+### House on Haunted Hill (1959)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-7/house-on-haunted-hill
+- **Rating**: 7.3 / 10 (980 votes)
+- **Genres**: Horror, Mystery
+- **Director**: William Castle
+- **Runtime**: 75 minutes
+- **Release Date**: 1959-02-17
+- **Lead Cast**: Vincent Price, Carol Ohmart
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: An eccentric millionaire and his icy wife offer $10,000 to each of five guests who agree to stay in a spooky rented mansion for a single night of terror.
+
+### The General (1926)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-8/the-general
+- **Rating**: 8.2 / 10 (1420 votes)
+- **Genres**: Comedy, Action, Adventure, War
+- **Director**: Buster Keaton, Clyde Bruckman
+- **Runtime**: 79 minutes
+- **Release Date**: 1926-12-25
+- **Lead Cast**: Buster Keaton, Marion Mack
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: During the American Civil War, Southern locomotive engineer Johnnie Gray is rejected by the Confederate military. When Union spies steal his beloved train engine and capture his sweetheart, Johnnie pursues them single-handedly behind enemy lines.
+
+### His Girl Friday (1940)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-9/his-girl-friday
+- **Rating**: 7.9 / 10 (1100 votes)
+- **Genres**: Comedy, Romance, Drama
+- **Director**: Howard Hawks
+- **Runtime**: 92 minutes
+- **Release Date**: 1940-01-18
+- **Lead Cast**: Cary Grant, Rosalind Russell
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: Hard-boiled editor Walter Burns uses every trick in the book to keep his top ace reporter and ex-wife, Hildy Johnson, from remarrying and leaving the newspaper business.
+
+### The Little Shop of Horrors (1960)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-10/the-little-shop-of-horrors
+- **Rating**: 6.9 / 10 (880 votes)
+- **Genres**: Comedy, Horror
+- **Director**: Roger Corman
+- **Runtime**: 72 minutes
+- **Release Date**: 1960-09-14
+- **Lead Cast**: Jonathan Haze, Jack Nicholson
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: A clumsy young florist creates a carnivorous talking plant that thrives exclusively on human blood and begins coercing its keeper into increasingly desperate murders.
+
+### Carnival of Souls (1962)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-11/carnival-of-souls
+- **Rating**: 7.3 / 10 (920 votes)
+- **Genres**: Horror, Mystery
+- **Director**: Herk Harvey
+- **Runtime**: 78 minutes
+- **Release Date**: 1962-09-26
+- **Lead Cast**: Candace Hilligoss
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: After surviving a traumatic car crash into a muddy river, a church organist moves to Utah to start fresh, only to be haunted by a sinister ghoul who beckons her to an abandoned lakeside pavilion.
+
+### Detour (1945)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-12/detour
+- **Rating**: 7.4 / 10 (890 votes)
+- **Genres**: Crime, Drama, Mystery, Thriller
+- **Director**: Edgar G. Ulmer
+- **Runtime**: 68 minutes
+- **Release Date**: 1945-11-30
+- **Lead Cast**: Tom Neal, Ann Savage
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: A down-on-his-luck nightclub pianist hitchhiking across America to meet his girlfriend in Hollywood finds himself trapped in a nightmare of accidental death and blackmail by an unscrupulous drifter.
+
+### The Gold Rush (1925)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-13/the-gold-rush
+- **Rating**: 8.1 / 10 (1600 votes)
+- **Genres**: Comedy, Adventure, Drama, Romance
+- **Director**: Charlie Chaplin
+- **Runtime**: 95 minutes
+- **Release Date**: 1925-06-26
+- **Lead Cast**: Charlie Chaplin, Georgia Hale
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: The Tramp travels to the frozen Yukon in search of gold and finds love, dangerous outlaws, and a hungry prospecting partner in a perilous mountain cabin.
+
+### A Trip to the Moon (1902)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-14/a-trip-to-the-moon
+- **Rating**: 8.0 / 10 (1800 votes)
+- **Genres**: Science Fiction, Adventure
+- **Director**: Georges Méliès
+- **Runtime**: 14 minutes
+- **Release Date**: 1902-09-01
+- **Lead Cast**: Georges Méliès
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: A group of intrepid astronomers journey to the Moon in a cannon-propelled capsule, explore the strange lunar surface, and escape the subterranean Selenites.
+
+### White Zombie (1932)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-15/white-zombie
+- **Rating**: 6.8 / 10 (780 votes)
+- **Genres**: Horror
+- **Director**: Victor Halperin
+- **Runtime**: 69 minutes
+- **Release Date**: 1932-08-04
+- **Lead Cast**: Bela Lugosi, Madge Bellamy
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: A young man turns to a sinister witch doctor in Haiti to lure the woman he loves away from her fiancé, but the sorcerer transforms her into a soulless zombie slave.
+
+### The Last Man on Earth (1964)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-16/the-last-man-on-earth
+- **Rating**: 7.0 / 10 (890 votes)
+- **Genres**: Horror, Science Fiction, Drama
+- **Director**: Ubaldo Ragona, Sidney Salkow
+- **Runtime**: 86 minutes
+- **Release Date**: 1964-03-08
+- **Lead Cast**: Vincent Price
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: Dr. Robert Morgan is the sole survivor of a devastating global plague that has transformed humanity into nocturnal, vampiric creatures.
+
+### The Stranger (1946)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-17/the-stranger
+- **Rating**: 7.4 / 10 (1120 votes)
+- **Genres**: Film-Noir, Thriller, Drama, Mystery
+- **Director**: Orson Welles
+- **Runtime**: 95 minutes
+- **Release Date**: 1946-07-02
+- **Lead Cast**: Orson Welles, Edward G. Robinson, Loretta Young
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: A war crimes investigator travels to a quiet Connecticut town to track down an elusive high-ranking Nazi mastermind who is living under a disguised identity as a respectable prep-school teacher.
+
+### Gulliver's Travels (1939)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-18/gulliver-s-travels
+- **Rating**: 6.8 / 10 (650 votes)
+- **Genres**: Animation, Adventure, Family, Fantasy
+- **Director**: Dave Fleischer
+- **Runtime**: 76 minutes
+- **Release Date**: 1939-12-22
+- **Lead Cast**: Sam Parker, Pinto Colvig
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: Shipwrecked sailor Lemuel Gulliver washes ashore on the island of Lilliput, where he is captured by its miniature inhabitants and becomes an unlikely hero in their kingdom's battle for peace.
+
+### Sherlock Holmes and the Secret Weapon (1942)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-19/sherlock-holmes-and-the-secret-weapon
+- **Rating**: 7.2 / 10 (740 votes)
+- **Genres**: Mystery, Crime, Thriller, War
+- **Director**: Roy William Neill
+- **Runtime**: 68 minutes
+- **Release Date**: 1942-12-25
+- **Lead Cast**: Basil Rathbone, Nigel Bruce, Lionel Atwill
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: Sherlock Holmes and Dr. Watson protect a Swiss inventor who has constructed a revolutionary bombsight from the clutches of the diabolical Professor Moriarty.
+
+### D.O.A. (1949)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-20/d-o-a
+- **Rating**: 7.5 / 10 (960 votes)
+- **Genres**: Mystery, Crime, Drama, Thriller
+- **Director**: Rudolph Maté
+- **Runtime**: 83 minutes
+- **Release Date**: 1949-12-31
+- **Lead Cast**: Edmond O'Brien, Pamela Britton
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: Accountant Frank Bigelow staggers into a police station to report his own murder. Having been administered a slow-acting lethal poison with no antidote, he spends his final 24 hours desperately unraveling who poisoned him and why.
+
+### Scarlet Street (1945)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-21/scarlet-street
+- **Rating**: 7.7 / 10 (1040 votes)
+- **Genres**: Drama, Crime, Thriller
+- **Director**: Fritz Lang
+- **Runtime**: 102 minutes
+- **Release Date**: 1945-12-28
+- **Lead Cast**: Edward G. Robinson, Joan Bennett, Dan Duryea
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: A timid, middle-aged cashier with a talent for painting falls under the spell of an opportunistic femme fatale and her ruthless boyfriend, who scheme to sell his artwork as her own.
+
+### Plan 9 from Outer Space (1959)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-pd-22/plan-9-from-outer-space
+- **Rating**: 6.2 / 10 (950 votes)
+- **Genres**: Science Fiction, Horror
+- **Director**: Edward D. Wood Jr.
+- **Runtime**: 79 minutes
+- **Release Date**: 1959-07-22
+- **Lead Cast**: Bela Lugosi, Maila Nurmi (Vampira), Tor Johnson
+- **Legal Stream Available**: YES (Free legal public domain stream on Jamal Movies)
+- **Synopsis**: Extraterrestrials enact their ninth plan to conquer the Earth: resurrecting the planet's deceased as zombies and ghouls to halt mankind from creating a catastrophic solar-powered doomsday weapon.
+
+### Avengers: Doomsday (2026)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-up-1/avengers-doomsday
+- **Rating**: 9.3 / 10 (3100 votes)
+- **Genres**: Action, Science Fiction, Adventure
+- **Director**: Anthony Russo, Joe Russo
+- **Runtime**: 165 minutes
+- **Release Date**: 2026-11-06
+- **Lead Cast**: Robert Downey Jr., Pedro Pascal, Benedict Cumberbatch, Tom Holland, Anthony Mackie
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Earth's mightiest heroes face their most formidable existential adversary when Doctor Victor von Doom emerges from the multiverse with devastating cosmic ambition.
+
+### The Batman Part II (2026)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-up-2/the-batman-part-ii
+- **Rating**: 9.0 / 10 (1900 votes)
+- **Genres**: Crime, Action, Drama, Mystery, Thriller
+- **Director**: Matt Reeves
+- **Runtime**: 170 minutes
+- **Release Date**: 2026-10-02
+- **Lead Cast**: Robert Pattinson, Colin Farrell, Andy Serkis, Jeffrey Wright
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Robert Pattinson returns as Bruce Wayne / Batman in the continuation of Matt Reeves' gritty detective crime noir universe as new criminal kingpins vie for control of a submerged Gotham.
+
+### Spider-Man: Beyond the Spider-Verse (2026)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-up-3/spider-man-beyond-the-spider-verse
+- **Rating**: 9.2 / 10 (2800 votes)
+- **Genres**: Animation, Action, Adventure, Science Fiction
+- **Director**: Joaquim Dos Santos, Kemp Powers, Justin K. Thompson
+- **Runtime**: 145 minutes
+- **Release Date**: 2026-11-20
+- **Lead Cast**: Shameik Moore, Hailee Steinfeld, Oscar Isaac, Daniel Kaluuya, Jason Schwartzman
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: The conclusion to the Spider-Verse trilogy following Miles Morales as he tries to rescue his father while navigating the multiversal spider-society and confronting his dark alternate universe counterpart on Earth-42.
+
+### The Mandalorian & Grogu (2026)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-up-4/the-mandalorian-grogu
+- **Rating**: 9.1 / 10 (2450 votes)
+- **Genres**: Science Fiction, Action, Adventure
+- **Director**: Jon Favreau
+- **Runtime**: 135 minutes
+- **Release Date**: 2026-12-25
+- **Lead Cast**: Pedro Pascal, Sigourney Weaver, Katee Sackhoff
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: The beloved bounty hunter Din Djarin and his Force-sensitive apprentice Grogu embark on a new galactic cinematic quest as the nascent New Republic struggles to safeguard peace against remnant Imperial warlords.
+
+### Dune: Messiah (2026)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-up-5/dune-messiah
+- **Rating**: 9.4 / 10 (3600 votes)
+- **Genres**: Science Fiction, Adventure, Drama
+- **Director**: Denis Villeneuve
+- **Runtime**: 175 minutes
+- **Release Date**: 2026-12-18
+- **Lead Cast**: Timothée Chalamet, Zendaya, Florence Pugh, Anya Taylor-Joy
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Paul Atreides rules as Emperor of the Known Universe, wrestling with the apocalyptic religious jihad waged in his name across thousands of worlds and the rising conspiracy against his golden throne.
+
+### Shrek 5 (2026)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-up-6/shrek-5
+- **Rating**: 8.9 / 10 (1800 votes)
+- **Genres**: Animation, Comedy, Family, Fantasy
+- **Director**: Walt Dohrn, Brad Ableson
+- **Runtime**: 105 minutes
+- **Release Date**: 2026-12-23
+- **Lead Cast**: Mike Myers, Eddie Murphy, Cameron Diaz
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: The beloved ogre Shrek, Donkey, and Princess Fiona return for a chaotic new family adventure deep in the magical realms of Far Far Away.
+
+### Avengers: Secret Wars (2027)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-up-7/avengers-secret-wars
+- **Rating**: 9.5 / 10 (4200 votes)
+- **Genres**: Action, Science Fiction, Adventure
+- **Director**: Anthony Russo, Joe Russo
+- **Runtime**: 180 minutes
+- **Release Date**: 2027-05-07
+- **Lead Cast**: Robert Downey Jr., Tom Holland, Pedro Pascal, Hugh Jackman, Ryan Reynolds
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: The culmination of the Multiverse Saga brings heroes and variants from across infinite timelines into a final cataclysmic battle on Battleworld.
+
+### Star Wars: Starfighter / New Jedi Order (2027)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-up-8/star-wars-starfighter-new-jedi-order
+- **Rating**: 9.0 / 10 (2100 votes)
+- **Genres**: Science Fiction, Action, Adventure
+- **Director**: Sharmeen Obaid-Chinoy
+- **Runtime**: 142 minutes
+- **Release Date**: 2027-12-17
+- **Lead Cast**: Daisy Ridley
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Rey Skywalker attempts to build a new Jedi Academy fifteen years after the events of The Rise of Skywalker, navigating rising galactic factions and mysterious new threats in the unknown regions.
+
+### Toy Story 5 (2026)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-up-9/toy-story-5
+- **Rating**: 8.8 / 10 (1600 votes)
+- **Genres**: Animation, Family, Adventure, Comedy
+- **Director**: Andrew Stanton
+- **Runtime**: 100 minutes
+- **Release Date**: 2026-11-27
+- **Lead Cast**: Tom Hanks, Tim Allen, Joan Cusack
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Woody, Buzz Lightyear, Jessie and the gang face their greatest contemporary challenge yet when electronics and screens disrupt the special bond between children and their physical toys.
+
+### Scream 7 (2027)
+- **URL**: https://jmcinema-phi.vercel.app/movie/mov-up-10/scream-7
+- **Rating**: 8.7 / 10 (1300 votes)
+- **Genres**: Horror, Mystery, Thriller
+- **Director**: Kevin Williamson
+- **Runtime**: 118 minutes
+- **Release Date**: 2027-02-26
+- **Lead Cast**: Neve Campbell, Courteney Cox, Patrick Dempsey
+- **Legal Stream Available**: No (Watch Official Trailer)
+- **Synopsis**: Sidney Prescott faces the return of Ghostface in a high-stakes battle to protect her family from a lethal copycat killer obsessed with the legacy of Woodsboro.

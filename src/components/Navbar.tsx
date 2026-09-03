@@ -12,18 +12,25 @@ import {
   Swords,
   HelpCircle,
   Zap,
-  ExternalLink
+  ExternalLink,
+  Bookmark,
+  Keyboard,
+  Clapperboard
 } from 'lucide-react';
 import { useMovies, TabType } from '../context/MovieContext';
 import { Movie } from '../types';
 import { ADSTERRA_TARGETED_CHANNELS, openAdsterraLink } from '../utils/adsterra';
+import { PWAInstallButton } from './PWAInstallButton';
 
 export const Navbar: React.FC = () => {
   const { 
     activeTab, 
     setActiveTab, 
     setAiConciergeOpen, 
-    openMovieDetails 
+    openMovieDetails,
+    watchlist,
+    setWatchlistOpen,
+    setShortcutsModalOpen
   } = useMovies();
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -174,19 +181,61 @@ export const Navbar: React.FC = () => {
               <Tv className="w-4 h-4 text-emerald-400" />
               <span>Free</span>
             </button>
+
+            <button
+              id="nav-link-collections"
+              onClick={() => handleNavClick('collections')}
+              className={`px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
+                activeTab === 'collections' 
+                  ? 'text-amber-300 bg-amber-500/15 border border-amber-500/30 shadow-sm' 
+                  : 'text-zinc-300 hover:text-white hover:bg-white/[0.08] border border-transparent'
+              }`}
+            >
+              <Clapperboard className="w-4 h-4 text-purple-400" />
+              <span>Hubs</span>
+            </button>
           </nav>
         </div>
 
-        {/* Right Controls: AI Assistant & Search Bar */}
-        <div className="flex items-center gap-2.5 sm:gap-3.5">
+        {/* Right Controls: PWA, Watchlist, AI Assistant & Search Bar */}
+        <div className="flex items-center gap-2 sm:gap-2.5">
           
+          {/* PWA Install Button */}
+          <PWAInstallButton compact={true} />
+
+          {/* Watchlist Quick Button */}
+          <button
+            id="nav-watchlist-btn"
+            onClick={() => setWatchlistOpen(true)}
+            className="relative flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 text-zinc-200 text-xs font-semibold transition-all backdrop-blur-md cursor-pointer active:scale-95"
+            title="Open Watchlist"
+          >
+            <Bookmark className="w-3.5 h-3.5 text-amber-400" />
+            <span className="hidden xl:inline">Watchlist</span>
+            {watchlist.length > 0 && (
+              <span className="px-1.5 py-0.2 rounded-full bg-amber-500 text-zinc-950 font-black text-[10px]">
+                {watchlist.length}
+              </span>
+            )}
+          </button>
+
+          {/* Keyboard Shortcuts Trigger */}
+          <button
+            id="nav-shortcuts-btn"
+            onClick={() => setShortcutsModalOpen(true)}
+            className="hidden lg:flex items-center justify-center w-8 h-8 rounded-xl bg-white/[0.04] hover:bg-white/[0.1] border border-white/10 text-zinc-400 hover:text-white text-xs font-mono transition-all cursor-pointer"
+            title="Keyboard Shortcuts (?)"
+          >
+            <Keyboard className="w-3.5 h-3.5" />
+          </button>
+
           {/* Direct 4K Mirror Sponsored Link */}
           <a
             href={ADSTERRA_TARGETED_CHANNELS.NAVBAR_VIP_STREAM}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => openAdsterraLink(ADSTERRA_TARGETED_CHANNELS.NAVBAR_VIP_STREAM)}
-            className="hidden lg:flex items-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-amber-500/20 via-purple-500/20 to-amber-500/20 hover:from-amber-500/30 hover:to-amber-500/30 border border-amber-400/40 text-amber-300 text-xs font-bold transition-all shadow-sm hover:scale-105 active:scale-95 cursor-pointer"
+            className="hidden 2xl:flex items-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-amber-500/20 via-purple-500/20 to-amber-500/20 hover:from-amber-500/30 hover:to-amber-500/30 border border-amber-400/40 text-amber-300 text-xs font-bold transition-all shadow-sm hover:scale-105 active:scale-95 cursor-pointer"
             title="Fast 4K Movie Stream Mirror"
           >
             <Zap className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
@@ -198,7 +247,7 @@ export const Navbar: React.FC = () => {
           <button
             id="nav-ai-concierge-btn"
             onClick={() => setAiConciergeOpen(true)}
-            className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] border border-amber-500/40 text-amber-300 hover:text-white text-xs sm:text-sm font-semibold transition-all backdrop-blur-md shadow-sm shadow-amber-500/10 active:scale-95 cursor-pointer"
+            className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] border border-amber-500/40 text-amber-300 hover:text-white text-xs sm:text-sm font-semibold transition-all backdrop-blur-md shadow-sm shadow-amber-500/10 active:scale-95 cursor-pointer"
             title="Ask AI Cinema Concierge for Recommendations"
           >
             <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" />
@@ -374,6 +423,21 @@ export const Navbar: React.FC = () => {
           </button>
 
           <button
+            onClick={() => handleNavClick('collections')}
+            className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold flex items-center justify-between transition-all ${
+              activeTab === 'collections' ? 'text-amber-300 bg-amber-500/10 border border-amber-500/20' : 'text-zinc-300 hover:bg-white/[0.04]'
+            }`}
+          >
+            <span className="flex items-center gap-2.5">
+              <Clapperboard className="w-4 h-4 text-purple-400" />
+              <span>Franchise &amp; Director Hubs</span>
+            </span>
+            <span className="px-2 py-0.5 text-[10px] bg-purple-500/20 text-purple-300 rounded font-mono border border-purple-500/30">
+              HUBS
+            </span>
+          </button>
+
+          <button
             onClick={() => {
               setMobileMenuOpen(false);
               setAiConciergeOpen(true);
@@ -382,6 +446,35 @@ export const Navbar: React.FC = () => {
           >
             <Sparkles className="w-4 h-4 text-amber-400" />
             <span>AI Vibe Matcher</span>
+          </button>
+
+          <button
+            onClick={() => {
+              setMobileMenuOpen(false);
+              setWatchlistOpen(true);
+            }}
+            className="w-full text-left px-4 py-3 rounded-xl text-sm font-semibold flex items-center justify-between text-zinc-200 bg-white/[0.04] hover:bg-white/[0.08] transition-all"
+          >
+            <span className="flex items-center gap-2.5">
+              <Bookmark className="w-4 h-4 text-amber-400" />
+              <span>Saved Watchlist</span>
+            </span>
+            {watchlist.length > 0 && (
+              <span className="px-2 py-0.5 text-xs bg-amber-500 text-zinc-950 font-black rounded-full">
+                {watchlist.length}
+              </span>
+            )}
+          </button>
+
+          <button
+            onClick={() => {
+              setMobileMenuOpen(false);
+              setShortcutsModalOpen(true);
+            }}
+            className="w-full text-left px-4 py-3 rounded-xl text-sm font-semibold flex items-center gap-2.5 text-zinc-400 hover:text-white bg-white/[0.02] hover:bg-white/[0.06] transition-all"
+          >
+            <Keyboard className="w-4 h-4 text-zinc-400" />
+            <span>Keyboard Shortcuts (?)</span>
           </button>
         </div>
       )}

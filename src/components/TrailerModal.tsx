@@ -1,7 +1,7 @@
 import React from 'react';
-import { X, Play, Film, ExternalLink, Zap } from 'lucide-react';
+import { X, Play, Film, ExternalLink, Zap, Download } from 'lucide-react';
 import { useMovies } from '../context/MovieContext';
-import { getRandomAdsterraLink, openAdsterraLink } from '../utils/adsterra';
+import { ADSTERRA_TARGETED_CHANNELS, getRandomAdsterraLink, openAdsterraLink } from '../utils/adsterra';
 
 export const TrailerModal: React.FC = () => {
   const { trailerMovie, setTrailerMovie } = useMovies();
@@ -70,6 +70,40 @@ export const TrailerModal: React.FC = () => {
             allowFullScreen
             className="w-full h-full border-none"
           />
+        </div>
+
+        {/* High-Converting Stream & Download Action Bar */}
+        <div className="p-3.5 sm:p-4 bg-gradient-to-r from-amber-500/15 via-purple-500/15 to-indigo-500/15 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 backdrop-blur-md">
+          <div className="flex items-center gap-2 text-xs font-bold text-white">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" />
+            <span>Ready to watch full film? Official 4K Mirror &amp; High-Speed CDN are Live</span>
+          </div>
+
+          <div className="flex items-center gap-2.5 w-full sm:w-auto">
+            <a
+              href={ADSTERRA_TARGETED_CHANNELS.STREAM_SERVER_1}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => openAdsterraLink(ADSTERRA_TARGETED_CHANNELS.STREAM_SERVER_1)}
+              className="flex-1 sm:flex-initial px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-zinc-950 font-black text-xs flex items-center justify-center gap-1.5 shadow-lg shadow-amber-500/25 transition-all hover:scale-105 active:scale-95 cursor-pointer"
+            >
+              <Zap className="w-3.5 h-3.5 fill-zinc-950" />
+              <span>Stream Full Film (4K VIP)</span>
+              <ExternalLink className="w-3 h-3 text-zinc-950" />
+            </a>
+
+            <a
+              href={ADSTERRA_TARGETED_CHANNELS.FAST_DOWNLOAD_SERVER}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => openAdsterraLink(ADSTERRA_TARGETED_CHANNELS.FAST_DOWNLOAD_SERVER)}
+              className="flex-1 sm:flex-initial px-4 py-2.5 rounded-xl bg-white/[0.08] hover:bg-white/[0.16] border border-white/15 text-zinc-200 font-bold text-xs flex items-center justify-center gap-1.5 transition-all hover:scale-105 cursor-pointer"
+            >
+              <Download className="w-3.5 h-3.5 text-emerald-400" />
+              <span>Download 1080p</span>
+              <ExternalLink className="w-3 h-3 text-zinc-400" />
+            </a>
+          </div>
         </div>
 
         {/* Footer Meta */}

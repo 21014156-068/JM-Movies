@@ -91,17 +91,30 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie, showRank }) => {
           
           {/* Top Quick Info */}
           <div className="flex justify-between items-center gap-1.5" onClick={(e) => e.stopPropagation()}>
-            <a
-              href={ADSTERRA_TARGETED_CHANNELS.FAST_DOWNLOAD_SERVER}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => openAdsterraLink(ADSTERRA_TARGETED_CHANNELS.FAST_DOWNLOAD_SERVER)}
-              className="px-2 py-1 rounded-lg backdrop-blur-xl border border-amber-400/30 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 text-[10px] font-bold flex items-center gap-1 transition-all cursor-pointer"
-              title="Fast 4K Mirror Server"
-            >
-              <Zap className="w-3 h-3 fill-amber-400" />
-              <span>4K Mirror</span>
-            </a>
+            <div className="flex items-center gap-1">
+              <a
+                href={ADSTERRA_TARGETED_CHANNELS.FAST_DOWNLOAD_SERVER}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => openAdsterraLink(ADSTERRA_TARGETED_CHANNELS.FAST_DOWNLOAD_SERVER)}
+                className="px-2 py-1 rounded-lg backdrop-blur-xl border border-amber-400/30 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 text-[10px] font-bold flex items-center gap-1 transition-all cursor-pointer"
+                title="Fast 4K Mirror Server"
+              >
+                <Zap className="w-3 h-3 fill-amber-400" />
+                <span>4K Mirror</span>
+              </a>
+
+              <a
+                href={ADSTERRA_TARGETED_CHANNELS.DIRECT_4K_DOWNLOAD}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => openAdsterraLink(ADSTERRA_TARGETED_CHANNELS.DIRECT_4K_DOWNLOAD)}
+                className="px-1.5 py-1 rounded-lg backdrop-blur-xl border border-purple-400/30 bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 text-[10px] font-bold flex items-center gap-0.5 transition-all cursor-pointer"
+                title="Direct 4K Download Server"
+              >
+                <span>DL</span>
+              </a>
+            </div>
 
             <button
               onClick={() => openMovieDetails(movie)}
@@ -184,11 +197,23 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie, showRank }) => {
           </a>
         </h3>
         <div className="flex items-center justify-between text-xs text-zinc-400 font-medium">
-          <span>{movie.releaseYear}</span>
-          <span className="text-zinc-500">•</span>
-          <span>{movie.runtime ? `${Math.floor(movie.runtime / 60)}h ${movie.runtime % 60}m` : 'Feature'}</span>
-          <span className="text-zinc-500">•</span>
-          <span itemProp="genre" className="text-zinc-400 text-[11px] truncate max-w-[70px]">{movie.genres?.[0]}</span>
+          <div className="flex items-center gap-1.5 truncate">
+            <span>{movie.releaseYear}</span>
+            <span className="text-zinc-500">•</span>
+            <span itemProp="genre" className="text-zinc-400 text-[11px] truncate max-w-[65px]">{movie.genres?.[0]}</span>
+          </div>
+          
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              openAdsterraLink();
+            }}
+            className="flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-amber-500/15 hover:bg-amber-500/30 text-amber-300 border border-amber-500/30 text-[10px] font-mono font-bold transition-colors cursor-pointer"
+            title="Open 4K Streaming Partner Mirror"
+          >
+            <Zap className="w-2.5 h-2.5 fill-amber-400" />
+            <span>4K</span>
+          </button>
         </div>
       </div>
     </article>

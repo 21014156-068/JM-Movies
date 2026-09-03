@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { Movie, ToastMessage } from '../types';
 
-export type TabType = 'home' | 'upcoming' | 'public-domain' | 'roulette' | 'battle' | 'trivia' | 'movie-detail';
+export type TabType = 'home' | 'upcoming' | 'public-domain' | 'collections' | 'roulette' | 'battle' | 'trivia' | 'movie-detail';
 
 interface MovieContextType {
   activeMovie: Movie | null;
@@ -27,6 +27,17 @@ interface MovieContextType {
   isAiConciergeOpen: boolean;
   setAiConciergeOpen: (open: boolean) => void;
 
+  watchlist: string[];
+  isInWatchlist: (id: string) => boolean;
+  toggleWatchlist: (movieId: string, movieTitle?: string) => void;
+  isWatchlistOpen: boolean;
+  setWatchlistOpen: (open: boolean) => void;
+  sharedWatchlistIds: string[] | null;
+  setSharedWatchlistIds: (ids: string[] | null) => void;
+
+  isShortcutsOpen: boolean;
+  setShortcutsOpen: (open: boolean) => void;
+
   toasts: ToastMessage[];
   showToast: (message: string, type?: ToastMessage['type']) => void;
   removeToast: (id: string) => void;
@@ -45,7 +56,107 @@ export const MovieProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   const [selectedGenre, setSelectedGenre] = useState<string>('All');
   const [isAiConciergeOpen, setAiConciergeOpen] = useState<boolean>(false);
 
+  // Watchlist & Shortcuts State
+  const [watchlist, setWatchlist] = useState<string[]>(() => {
+    try {
+      const saved = localStorage.getItem('jamal_watchlist');
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  });
+  const [isWatchlistOpen, setWatchlistOpen] = useState(false);
+  const [sharedWatchlistIds, setSharedWatchlistIds] = useState<string[] | null>(null);
+  const [isShortcutsOpen, setShortcutsOpen] = useState(false);
+
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
+
+  // Sync watchlist to localStorage
+  useEffect(() => {
+    try {
+      localStorage.setItem('jamal_watchlist', JSON.stringify(watchlist));
+    } catch {
+      // ignore
+    }
+  }, [watchlist]);
+
+  const isInWatchlist = (id: string) => watchlist.includes(id);
+
+  const toggleWatchlist = (movieId: string, movieTitle?: string) => {
+    setWatchlist(prev => {
+      const exists = prev.includes(movieId);
+      if (exists) {
+        showToast(`Removed "${movieTitle || 'Movie'}" from your Watchlist`, 'info');
+        return prev.filter(id => id !== movieId);
+      } else {
+        showToast(`Added "${movieTitle || 'Movie'}" to your Watchlist!`, 'success');
+        return [movieId, ...prev];
+      }
+    });
+  };
+
+  // Global Keyboard Shortcuts
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement;
+      const isInput =
+        target.tagName === 'INPUT' ||
+        target.tagName === 'TEXTAREA' ||
+        target.isContentEditable;
+
+      // Close open modals on Escape
+      if (e.key === 'Escape') {
+        if (isShortcutsOpen) {
+          setShortcutsOpen(false);
+          return;
+        }
+        if (isWatchlistOpen) {
+          setWatchlistOpen(false);
+          return;
+        }
+        if (isAiConciergeOpen) {
+          setAiConciergeOpen(false);
+          return;
+        }
+        if (trailerMovie) {
+          setTrailerMovie(null);
+          return;
+        }
+        if (streamingMovie) {
+          setStreamingMovie(null);
+          return;
+        }
+      }
+
+      if (isInput) return;
+
+      // "/" opens and focuses quick search
+      if (e.key === '/') {
+        e.preventDefault();
+        const searchInput = document.getElementById('nav-quick-search-input');
+        if (searchInput) {
+          searchInput.focus();
+        }
+      }
+
+      // "?" opens shortcuts guide
+      if (e.key === '?') {
+        e.preventDefault();
+        setShortcutsOpen(prev => !prev);
+      }
+
+      // "w" toggles watchlist
+      if (e.key === 'w' || e.key === 'W') {
+        if (!e.ctrlKey && !e.metaKey) {
+          e.preventDefault();
+          setWatchlistOpen(prev => !prev);
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isShortcutsOpen, isWatchlistOpen, isAiConciergeOpen, trailerMovie, streamingMovie]);
 
   // Check URL path or search parameters on initial mount or popstate (e.g. /movie/123/title or ?movie=...)
   useEffect(() => {
@@ -97,6 +208,15 @@ export const MovieProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         const sParam = params.get('search') || params.get('q');
         if (sParam) {
           setSearchQuery(sParam);
+        }
+
+        const wlParam = params.get('watchlist');
+        if (wlParam) {
+          const ids = wlParam.split(',').map(s => s.trim()).filter(Boolean);
+          if (ids.length > 0) {
+            setSharedWatchlistIds(ids);
+            setWatchlistOpen(true);
+          }
         }
 
         if (movieId) {
@@ -243,6 +363,15 @@ export const MovieProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         setSelectedGenre,
         isAiConciergeOpen,
         setAiConciergeOpen,
+        watchlist,
+        isInWatchlist,
+        toggleWatchlist,
+        isWatchlistOpen,
+        setWatchlistOpen,
+        sharedWatchlistIds,
+        setSharedWatchlistIds,
+        isShortcutsOpen,
+        setShortcutsOpen,
         toasts,
         showToast,
         removeToast

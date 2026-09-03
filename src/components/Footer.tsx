@@ -50,6 +50,10 @@ export const Footer: React.FC = () => {
             <a href="/robots.txt" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 text-zinc-400 transition-colors">
               Robots.txt
             </a>
+            <a href="/llms.txt" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 text-amber-400/90 font-mono text-[11px] transition-colors flex items-center gap-1">
+              <span>llms.txt</span>
+              <span className="text-[9px] px-1 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">AI</span>
+            </a>
             <button onClick={() => setAiConciergeOpen(true)} className="hover:text-amber-400 text-amber-300/90 transition-colors cursor-pointer flex items-center gap-1">
               <Sparkles className="w-3.5 h-3.5" />
               <span>AI Vibe Matcher</span>

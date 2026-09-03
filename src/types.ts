@@ -62,6 +62,7 @@ export interface Review {
   rating: number; // 1 to 10
   title: string;
   comment: string;
+  containsSpoiler?: boolean;
   likes: number;
   likedBy?: string[];
   createdAt: string;
@@ -157,4 +158,25 @@ export interface ToastMessage {
   id: string;
   type: 'success' | 'info' | 'error' | 'warning';
   message: string;
+}
+
+export interface CollectionHub {
+  id: string;
+  slug: string;
+  title: string;
+  type: 'director' | 'franchise' | 'where-to-watch';
+  creatorOrTagline: string;
+  description: string;
+  backdrop: string;
+  poster: string;
+  badge: string;
+  movieCount: number;
+  featuredTitles: string[];
+  targetQuery?: string;
+  targetGenre?: string;
+  whereToWatchInfo?: {
+    freeStreamAvailable: boolean;
+    theatricalStatus: string;
+    trailerResolution: string;
+  };
 }
