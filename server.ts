@@ -780,9 +780,13 @@ ${staticUrls.map(u => `  <url>
 
     const movieUrls = allMovies.map(m => {
       const slug = encodeURIComponent(m.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''));
+      const lastmod = (m.updatedAt && m.updatedAt.slice(0, 10) >= '2024-01-01' && m.updatedAt.slice(0, 10) <= today)
+        ? m.updatedAt.slice(0, 10)
+        : today;
+
       return {
         loc: `${baseUrl}/movie/${m.id}/${slug}`,
-        lastmod: m.updatedAt ? m.updatedAt.split('T')[0] : today,
+        lastmod,
         priority: m.rating && m.rating >= 8.0 ? '1.0' : '0.8',
         changefreq: 'weekly',
         image: m.poster || m.backdrop,

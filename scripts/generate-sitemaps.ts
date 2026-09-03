@@ -84,7 +84,11 @@ const uniqueMovies = combinedMovies.filter(m => {
 const movieUrls = uniqueMovies.map(m => {
   const safeTitle = (m.title || 'Movie').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const poster = m.poster ? m.poster.replace(/&/g, '&amp;') : '';
-  const date = m.releaseDate || TODAY;
+  // Google Search Console requires lastmod to be the page modification date (W3C Datetime format),
+  // NEVER the historical movie release date (e.g. 1968, 1927) or future release dates.
+  const date = (m.updatedAt && m.updatedAt.slice(0, 10) >= '2024-01-01' && m.updatedAt.slice(0, 10) <= TODAY) 
+    ? m.updatedAt.slice(0, 10) 
+    : TODAY;
 
   return `  <url>
     <loc>${DOMAIN}/movie/${m.id}</loc>
