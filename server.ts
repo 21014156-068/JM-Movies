@@ -511,16 +511,19 @@ async function startServer() {
       } catch (e) {
         // use existing
       }
-    } else if (!movie && !isNaN(Number(req.params.id))) {
-      // Try direct TMDB ID fetch
-      try {
-        const liveMovie = await fetchTmdbMovieDetails(req.params.id);
-        if (liveMovie) {
-          db.upsertMovies([liveMovie]);
-          movie = liveMovie;
+    } else if (!movie) {
+      const cleanId = req.params.id.replace(/^tmdb-/, '');
+      if (!isNaN(Number(cleanId))) {
+        // Try direct TMDB ID fetch
+        try {
+          const liveMovie = await fetchTmdbMovieDetails(cleanId);
+          if (liveMovie) {
+            db.upsertMovies([liveMovie]);
+            movie = liveMovie;
+          }
+        } catch (e) {
+          // ignore
         }
-      } catch (e) {
-        // ignore
       }
     }
 
@@ -1537,15 +1540,18 @@ ${itemsXml}
     if (!movieId) return html;
 
     let movie = db.getMovieById(movieId);
-    if (!movie && !isNaN(Number(movieId))) {
-      try {
-        const liveMovie = await fetchTmdbMovieDetails(movieId);
-        if (liveMovie) {
-          db.upsertMovies([liveMovie]);
-          movie = liveMovie;
+    if (!movie) {
+      const cleanId = String(movieId).replace(/^tmdb-/, '');
+      if (!isNaN(Number(cleanId))) {
+        try {
+          const liveMovie = await fetchTmdbMovieDetails(cleanId);
+          if (liveMovie) {
+            db.upsertMovies([liveMovie]);
+            movie = liveMovie;
+          }
+        } catch {
+          // fallback
         }
-      } catch {
-        // fallback
       }
     }
 

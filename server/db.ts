@@ -343,7 +343,15 @@ class DatabaseStore {
   }
 
   public getMovieById(id: string): Movie | undefined {
-    return this.movies.find(m => m.id === id || String(m.tmdbId) === id);
+    if (!id) return undefined;
+    const cleanId = String(id).replace(/^tmdb-/, '');
+    return this.movies.find(m => 
+      m.id === id || 
+      m.id === cleanId || 
+      m.id === `tmdb-${cleanId}` || 
+      String(m.tmdbId) === id || 
+      String(m.tmdbId) === cleanId
+    );
   }
 
   public getFeaturedMovies(): Movie[] {
