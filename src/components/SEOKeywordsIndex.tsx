@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Sparkles, Search, TrendingUp, Compass, Film, ExternalLink, ChevronRight, Award, Zap, CheckCircle2, RefreshCw } from 'lucide-react';
 import { useMovies } from '../context/MovieContext';
 import { pingIndexNow, pingSitemaps } from '../utils/seo';
+import { SitemapIndexHub } from './SitemapIndexHub';
 
 interface KeywordData {
   keyword: string;
@@ -169,15 +170,28 @@ export const SEOKeywordsIndex: React.FC = () => {
         )}
       </div>
 
+      {/* 1.17M Movies Paginated Sitemap Index & XML Architecture Hub */}
+      <SitemapIndexHub />
+
       {/* SEO Notice */}
       <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-[11px] text-zinc-400 gap-2 font-mono">
         <div className="flex items-center gap-2">
           <Award className="w-3.5 h-3.5 text-amber-400" />
-          <span>Automated Google Sitemap XML, IndexNow Engine & JSON-LD Structured Graph Active</span>
+          <span>Automated Google Sitemap XML (47 Chunks / 1.17M Movies), IndexNow Engine & JSON-LD Structured Graph Active</span>
         </div>
         <div className="flex items-center gap-3">
           <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors flex items-center gap-1">
             <span>/sitemap.xml</span>
+            <ExternalLink className="w-3 h-3" />
+          </a>
+          <span>•</span>
+          <a href="/sitemap-movies.xml" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors flex items-center gap-1">
+            <span>/sitemap-movies.xml</span>
+            <ExternalLink className="w-3 h-3" />
+          </a>
+          <span>•</span>
+          <a href="/sitemap-movies-curated.xml" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors flex items-center gap-1">
+            <span>/sitemap-movies-curated.xml</span>
             <ExternalLink className="w-3 h-3" />
           </a>
           <span>•</span>

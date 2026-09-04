@@ -74,6 +74,7 @@ Allow: /
 Sitemap: https://jmcinema-phi.vercel.app/sitemap.xml
 Sitemap: https://jmcinema-phi.vercel.app/sitemap-main.xml
 Sitemap: https://jmcinema-phi.vercel.app/sitemap-movies.xml
+Sitemap: https://jmcinema-phi.vercel.app/sitemap-movies-curated.xml
 Sitemap: https://jmcinema-phi.vercel.app/sitemap-collections.xml
 Sitemap: https://jmcinema-phi.vercel.app/sitemap-genres.xml
 Sitemap: https://jmcinema-phi.vercel.app/sitemap-years.xml

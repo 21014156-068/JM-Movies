@@ -9,6 +9,11 @@ const DOMAIN = 'https://jmcinema-phi.vercel.app';
 const TODAY = new Date().toISOString().split('T')[0];
 const PUBLIC_DIR = path.resolve(process.cwd(), 'public');
 
+// Scale configuration for All 1.17M TMDB Movies Paginated Sitemap Index
+const TOTAL_TMDB_MOVIES = 1170000;
+const MOVIES_PER_SITEMAP = 25000;
+const TOTAL_CHUNKS = Math.ceil(TOTAL_TMDB_MOVIES / MOVIES_PER_SITEMAP); // 47 sitemaps
+
 if (!fs.existsSync(PUBLIC_DIR)) {
   fs.mkdirSync(PUBLIC_DIR, { recursive: true });
 }
@@ -25,7 +30,12 @@ const escapeXml = (str: string) =>
 const createSlug = (title: string) => 
   encodeURIComponent(title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''));
 
-// 1. Master Sitemap Index
+// 1. Master Sitemap Index (Pointing to Main, Curated, Taxonomies, and All 47 Movie Sitemaps covering 1.17M Movies)
+const movieSitemapEntries = Array.from({ length: TOTAL_CHUNKS }, (_, i) => `  <sitemap>
+    <loc>${DOMAIN}/sitemap-movies-${i + 1}.xml</loc>
+    <lastmod>${TODAY}</lastmod>
+  </sitemap>`).join('\n');
+
 const masterSitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
@@ -34,6 +44,10 @@ const masterSitemap = `<?xml version="1.0" encoding="UTF-8"?>
   </sitemap>
   <sitemap>
     <loc>${DOMAIN}/sitemap-movies.xml</loc>
+    <lastmod>${TODAY}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>${DOMAIN}/sitemap-movies-curated.xml</loc>
     <lastmod>${TODAY}</lastmod>
   </sitemap>
   <sitemap>
@@ -52,9 +66,23 @@ const masterSitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <loc>${DOMAIN}/sitemap-keywords.xml</loc>
     <lastmod>${TODAY}</lastmod>
   </sitemap>
+  <!-- Paginated Sitemap Index for All 1.17M Movies (47 Sitemaps, 25,000 URLs each) -->
+${movieSitemapEntries}
 </sitemapindex>`.trim();
 
 fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap.xml'), masterSitemap, 'utf8');
+
+// 1b. Dedicated Movie Sitemap Index (Sub-Index for Search Engines crawling only movies)
+const movieIndexSitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>${DOMAIN}/sitemap-movies-curated.xml</loc>
+    <lastmod>${TODAY}</lastmod>
+  </sitemap>
+${movieSitemapEntries}
+</sitemapindex>`.trim();
+
+fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-movies.xml'), movieIndexSitemap, 'utf8');
 
 // 2. Main Pages Sitemap
 const mainRoutes = [
@@ -149,7 +177,21 @@ const moviesSitemap = `<?xml version="1.0" encoding="UTF-8"?>
 ${movieUrlEntries.join('\n')}
 </urlset>`.trim();
 
-fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-movies.xml'), moviesSitemap, 'utf8');
+fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-movies-curated.xml'), moviesSitemap, 'utf8');
+
+// 3b. Generate Paginated Sitemaps for All 1.17M Movies (47 Sitemaps, 25,000 URLs each)
+console.log(`Generating ${TOTAL_CHUNKS} paginated movie sitemaps for ${TOTAL_TMDB_MOVIES.toLocaleString()} movies...`);
+for (let p = 1; p <= TOTAL_CHUNKS; p++) {
+  const fromId = (p - 1) * MOVIES_PER_SITEMAP + 1;
+  const toId = Math.min(p * MOVIES_PER_SITEMAP, TOTAL_TMDB_MOVIES);
+  let chunkXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+  for (let id = fromId; id <= toId; id++) {
+    chunkXml += `  <url>\n    <loc>${DOMAIN}/movie/tmdb-${id}</loc>\n    <lastmod>${TODAY}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.7</priority>\n  </url>\n`;
+  }
+  chunkXml += `</urlset>`;
+  fs.writeFileSync(path.join(PUBLIC_DIR, `sitemap-movies-${p}.xml`), chunkXml, 'utf8');
+}
+console.log(`✅ Successfully wrote ${TOTAL_CHUNKS} paginated movie sitemaps (sitemap-movies-1.xml to sitemap-movies-${TOTAL_CHUNKS}.xml).`);
 
 // 4. Curated Collection Hubs Sitemap
 const collectionUrlEntries: string[] = [];
@@ -352,6 +394,7 @@ Allow: /
 Sitemap: ${DOMAIN}/sitemap.xml
 Sitemap: ${DOMAIN}/sitemap-main.xml
 Sitemap: ${DOMAIN}/sitemap-movies.xml
+Sitemap: ${DOMAIN}/sitemap-movies-curated.xml
 Sitemap: ${DOMAIN}/sitemap-collections.xml
 Sitemap: ${DOMAIN}/sitemap-genres.xml
 Sitemap: ${DOMAIN}/sitemap-years.xml

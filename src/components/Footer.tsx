@@ -41,11 +41,15 @@ export const Footer: React.FC = () => {
             <button onClick={() => { setActiveTab('public-domain'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="hover:text-emerald-400 transition-colors cursor-pointer">
               Watch Free Classics
             </button>
-            <a href="/sitemap-movies.xml" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 text-zinc-400 transition-colors">
-              Movie Sitemap
+            <a href="/sitemap-movies.xml" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 text-zinc-400 transition-colors flex items-center gap-1.5">
+              <span>1.17M Movie Sitemaps</span>
+              <span className="text-[9px] px-1 py-0.2 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-mono">47 Chunks</span>
             </a>
             <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 text-zinc-400 transition-colors">
-              XML Index
+              XML Master Index
+            </a>
+            <a href="/sitemap-movies-curated.xml" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 text-zinc-400 transition-colors">
+              Curated HD
             </a>
             <a href="/robots.txt" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 text-zinc-400 transition-colors">
               Robots.txt

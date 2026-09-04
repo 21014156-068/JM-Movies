@@ -791,6 +791,7 @@ Allow: /
 Sitemap: ${baseUrl}/sitemap.xml
 Sitemap: ${baseUrl}/sitemap-main.xml
 Sitemap: ${baseUrl}/sitemap-movies.xml
+Sitemap: ${baseUrl}/sitemap-movies-curated.xml
 Sitemap: ${baseUrl}/sitemap-collections.xml
 Sitemap: ${baseUrl}/sitemap-genres.xml
 Sitemap: ${baseUrl}/sitemap-years.xml
@@ -979,12 +980,30 @@ Jamal Movies provides legal free streaming for public domain cinema, official HD
     res.type('text/html').send(`google-site-verification: ${filename}`);
   });
 
+  // XML Escaping Helper
+  const escapeXml = (str: string) => 
+    (str || '').replace(/&/g, '&amp;')
+               .replace(/</g, '&lt;')
+               .replace(/>/g, '&gt;')
+               .replace(/"/g, '&quot;')
+               .replace(/'/g, '&apos;');
+
+  // 1.17M TMDB Movies Paginated Sitemap Configuration (Google Search Console Scalable Index)
+  const TOTAL_TMDB_MOVIES = 1170000;
+  const MOVIES_PER_SITEMAP = 25000;
+  const TOTAL_MOVIE_SITEMAPS = Math.ceil(TOTAL_TMDB_MOVIES / MOVIES_PER_SITEMAP); // 47 sitemaps
+
   // Master Sitemap Index for Google Search Console
   app.get('/sitemap.xml', (req, res) => {
     const host = req.get('host') || 'localhost:3000';
     const protocol = req.protocol === 'https' || req.headers['x-forwarded-proto'] === 'https' ? 'https' : 'http';
     const baseUrl = `${protocol}://${host}`;
     const today = new Date().toISOString().split('T')[0];
+
+    const movieSitemapEntries = Array.from({ length: TOTAL_MOVIE_SITEMAPS }, (_, i) => `  <sitemap>
+    <loc>${baseUrl}/sitemap-movies-${i + 1}.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>`).join('\n');
 
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -994,6 +1013,10 @@ Jamal Movies provides legal free streaming for public domain cinema, official HD
   </sitemap>
   <sitemap>
     <loc>${baseUrl}/sitemap-movies.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>${baseUrl}/sitemap-movies-curated.xml</loc>
     <lastmod>${today}</lastmod>
   </sitemap>
   <sitemap>
@@ -1012,6 +1035,8 @@ Jamal Movies provides legal free streaming for public domain cinema, official HD
     <loc>${baseUrl}/sitemap-keywords.xml</loc>
     <lastmod>${today}</lastmod>
   </sitemap>
+  <!-- Paginated Movie Sitemaps covering All 1.17M Movies (47 Chunks) -->
+${movieSitemapEntries}
 </sitemapindex>`;
 
     res.type('application/xml').send(xml);
@@ -1159,8 +1184,32 @@ ${yearUrls.map(u => `  <url>
     res.type('application/xml').send(xml);
   });
 
-  // Comprehensive Movies Sitemap with Google Image extensions & Dual Permalinks
-  app.get('/sitemap-movies.xml', (req, res) => {
+  // 1. Dedicated Movie Sitemap Index (Scalable Index of Curated + 47 Paginated Movie Sitemaps)
+  app.get(['/sitemap-movies.xml', '/sitemap-movies-index.xml'], (req, res) => {
+    const host = req.get('host') || 'localhost:3000';
+    const protocol = req.protocol === 'https' || req.headers['x-forwarded-proto'] === 'https' ? 'https' : 'http';
+    const baseUrl = `${protocol}://${host}`;
+    const today = new Date().toISOString().split('T')[0];
+
+    const movieSitemapEntries = Array.from({ length: TOTAL_MOVIE_SITEMAPS }, (_, i) => `  <sitemap>
+    <loc>${baseUrl}/sitemap-movies-${i + 1}.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>`).join('\n');
+
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>${baseUrl}/sitemap-movies-curated.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>
+${movieSitemapEntries}
+</sitemapindex>`;
+
+    res.type('application/xml').send(xml);
+  });
+
+  // 2. Curated & Featured Movies Sitemap with Google Image Extensions & Dual Permalinks
+  app.get('/sitemap-movies-curated.xml', (req, res) => {
     const host = req.get('host') || 'localhost:3000';
     const protocol = req.protocol === 'https' || req.headers['x-forwarded-proto'] === 'https' ? 'https' : 'http';
     const baseUrl = `${protocol}://${host}`;
@@ -1213,6 +1262,40 @@ ${movieUrls.map(u => `  <url>
 </urlset>`;
 
     res.type('application/xml').send(xml);
+  });
+
+  // 3. Paginated Movie Sitemaps for All 1.17M Movies (47 Chunks, 25,000 URLs per Chunk)
+  app.get('/sitemap-movies-:page.xml', (req, res) => {
+    const host = req.get('host') || 'localhost:3000';
+    const protocol = req.protocol === 'https' || req.headers['x-forwarded-proto'] === 'https' ? 'https' : 'http';
+    const baseUrl = `${protocol}://${host}`;
+    const today = new Date().toISOString().split('T')[0];
+
+    const pageNum = parseInt(req.params.page, 10);
+    if (isNaN(pageNum) || pageNum < 1 || pageNum > TOTAL_MOVIE_SITEMAPS) {
+      return res.status(404).type('application/xml').send(`<?xml version="1.0" encoding="UTF-8"?>
+<error>
+  <message>Sitemap page ${escapeXml(req.params.page)} not found. Valid pages: 1 to ${TOTAL_MOVIE_SITEMAPS}</message>
+</error>`);
+    }
+
+    const startId = (pageNum - 1) * MOVIES_PER_SITEMAP + 1;
+    const endId = Math.min(pageNum * MOVIES_PER_SITEMAP, TOTAL_TMDB_MOVIES);
+
+    let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+    for (let id = startId; id <= endId; id++) {
+      xml += `  <url>\n    <loc>${baseUrl}/movie/tmdb-${id}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.7</priority>\n  </url>\n`;
+    }
+    xml += `</urlset>`;
+
+    res.set({
+      'Content-Type': 'application/xml; charset=utf-8',
+      'Cache-Control': 'public, max-age=604800, s-maxage=604800, stale-while-revalidate=86400',
+      'X-Sitemap-Page': String(pageNum),
+      'X-Total-Chunks': String(TOTAL_MOVIE_SITEMAPS),
+      'X-Movies-Count': String(endId - startId + 1)
+    });
+    res.send(xml);
   });
 
   // Keyword Clusters Sitemap for Google Search Rankings (Full Coverage - No 500 cap)
@@ -1362,30 +1445,87 @@ ${keywordUrls.map(u => `  <url>
     const protocol = req.protocol === 'https' || req.headers['x-forwarded-proto'] === 'https' ? 'https' : 'http';
     const baseUrl = `${protocol}://${host}`;
     const sitemapUrl = `${baseUrl}/sitemap.xml`;
+    const movieSitemapUrl = `${baseUrl}/sitemap-movies.xml`;
 
     const pingResults: Record<string, string> = {};
 
-    // Ping Google
+    // Ping Google with Master Sitemap and Movie Sitemap Index
     try {
       const gRes = await fetch(`https://www.google.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`);
-      pingResults.google = `HTTP ${gRes.status}`;
+      pingResults.googleMaster = `HTTP ${gRes.status}`;
     } catch (e: any) {
-      pingResults.google = e.message || 'Google ping timed out';
+      pingResults.googleMaster = e.message || 'Google ping timed out';
+    }
+
+    try {
+      const gMovieRes = await fetch(`https://www.google.com/ping?sitemap=${encodeURIComponent(movieSitemapUrl)}`);
+      pingResults.googleMovies = `HTTP ${gMovieRes.status}`;
+    } catch (e: any) {
+      pingResults.googleMovies = e.message || 'Google movie ping timed out';
     }
 
     // Ping Bing
     try {
       const bRes = await fetch(`https://www.bing.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`);
-      pingResults.bing = `HTTP ${bRes.status}`;
+      pingResults.bingMaster = `HTTP ${bRes.status}`;
     } catch (e: any) {
-      pingResults.bing = e.message || 'Bing ping timed out';
+      pingResults.bingMaster = e.message || 'Bing ping timed out';
+    }
+
+    try {
+      const bMovieRes = await fetch(`https://www.bing.com/ping?sitemap=${encodeURIComponent(movieSitemapUrl)}`);
+      pingResults.bingMovies = `HTTP ${bMovieRes.status}`;
+    } catch (e: any) {
+      pingResults.bingMovies = e.message || 'Bing movie ping timed out';
     }
 
     res.json({
       success: true,
-      sitemapUrl,
+      masterSitemapUrl: sitemapUrl,
+      movieSitemapUrl,
+      totalIndexedMovies: TOTAL_TMDB_MOVIES,
+      totalMovieSitemaps: TOTAL_MOVIE_SITEMAPS,
       results: pingResults,
       timestamp: new Date().toISOString()
+    });
+  });
+
+  // Dedicated Sitemaps Metadata Endpoint
+  app.get('/api/seo/sitemaps', (req, res) => {
+    const host = req.get('host') || 'localhost:3000';
+    const protocol = req.protocol === 'https' || req.headers['x-forwarded-proto'] === 'https' ? 'https' : 'http';
+    const baseUrl = `${protocol}://${host}`;
+
+    const chunks = Array.from({ length: TOTAL_MOVIE_SITEMAPS }, (_, i) => {
+      const page = i + 1;
+      const startId = (page - 1) * MOVIES_PER_SITEMAP + 1;
+      const endId = Math.min(page * MOVIES_PER_SITEMAP, TOTAL_TMDB_MOVIES);
+      return {
+        chunk: page,
+        filename: `sitemap-movies-${page}.xml`,
+        url: `${baseUrl}/sitemap-movies-${page}.xml`,
+        range: `TMDB #${startId.toLocaleString()} - #${endId.toLocaleString()}`,
+        startId,
+        endId,
+        count: endId - startId + 1
+      };
+    });
+
+    res.json({
+      totalMovies: TOTAL_TMDB_MOVIES,
+      moviesPerSitemap: MOVIES_PER_SITEMAP,
+      totalChunks: TOTAL_MOVIE_SITEMAPS,
+      masterIndex: `${baseUrl}/sitemap.xml`,
+      movieIndex: `${baseUrl}/sitemap-movies.xml`,
+      curatedSitemap: `${baseUrl}/sitemap-movies-curated.xml`,
+      categorySitemaps: [
+        `${baseUrl}/sitemap-main.xml`,
+        `${baseUrl}/sitemap-collections.xml`,
+        `${baseUrl}/sitemap-genres.xml`,
+        `${baseUrl}/sitemap-years.xml`,
+        `${baseUrl}/sitemap-keywords.xml`
+      ],
+      chunks
     });
   });
 
@@ -1399,12 +1539,19 @@ ${keywordUrls.map(u => `  <url>
     res.json({
       siteName: 'Jamal Movies',
       baseUrl,
-      totalMoviesIndexed: allMovies.length,
+      totalMoviesCatalog: TOTAL_TMDB_MOVIES,
+      totalMovieSitemaps: TOTAL_MOVIE_SITEMAPS,
+      moviesPerSitemapChunk: MOVIES_PER_SITEMAP,
+      totalCuratedMovies: allMovies.length,
       publicDomainStreams: allMovies.filter(m => m.publicDomain).length,
+      masterSitemap: `${baseUrl}/sitemap.xml`,
+      movieSitemapIndex: `${baseUrl}/sitemap-movies.xml`,
+      curatedMovieSitemap: `${baseUrl}/sitemap-movies-curated.xml`,
       sitemaps: [
         `${baseUrl}/sitemap.xml`,
         `${baseUrl}/sitemap-main.xml`,
         `${baseUrl}/sitemap-movies.xml`,
+        `${baseUrl}/sitemap-movies-curated.xml`,
         `${baseUrl}/sitemap-collections.xml`,
         `${baseUrl}/sitemap-genres.xml`,
         `${baseUrl}/sitemap-years.xml`,
