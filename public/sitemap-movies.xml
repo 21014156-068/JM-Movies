@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-1</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -11,8 +11,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-1/inception</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/ljsZTbVsrQSqZgWeep2P1PDKY8m.jpg</image:loc>
+      <image:title>Inception Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-2</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -21,8 +31,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-2/interstellar</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg</image:loc>
+      <image:title>Interstellar Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-3</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -31,8 +51,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-3/dune-part-two</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg</image:loc>
+      <image:title>Dune: Part Two Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-4</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -41,8 +71,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-4/dune-part-one</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg</image:loc>
+      <image:title>Dune: Part One Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-5</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -51,8 +91,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-5/blade-runner-2049</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg</image:loc>
+      <image:title>Blade Runner 2049 Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-6</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -61,8 +111,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-6/the-matrix</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg</image:loc>
+      <image:title>The Matrix Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-7</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -71,8 +131,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-7/oppenheimer</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg</image:loc>
+      <image:title>Oppenheimer Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-8</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -81,8 +151,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-8/the-shawshank-redemption</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg</image:loc>
+      <image:title>The Shawshank Redemption Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-9</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -91,8 +171,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-9/the-godfather</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg</image:loc>
+      <image:title>The Godfather Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-10</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -101,8 +191,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-10/the-godfather-part-ii</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/hek3koDUyMrk7ahxPWN9PZ9nRGe.jpg</image:loc>
+      <image:title>The Godfather Part II Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-11</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -111,8 +211,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-11/the-dark-knight</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg</image:loc>
+      <image:title>The Dark Knight Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-12</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -121,8 +231,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-12/pulp-fiction</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg</image:loc>
+      <image:title>Pulp Fiction Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-13</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -131,8 +251,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-13/parasite</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg</image:loc>
+      <image:title>Parasite Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-14</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -141,8 +271,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-14/fight-club</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg</image:loc>
+      <image:title>Fight Club Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-15</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -151,8 +291,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-15/spider-man-across-the-spider-verse</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg</image:loc>
+      <image:title>Spider-Man: Across the Spider-Verse Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-16</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -161,8 +311,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-16/top-gun-maverick</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/62HCnUTziyWcpDaBO2i1DX17ljH.jpg</image:loc>
+      <image:title>Top Gun: Maverick Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-17</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -171,8 +331,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-17/avatar-the-way-of-water</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg</image:loc>
+      <image:title>Avatar: The Way of Water Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-18</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -181,8 +351,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-18/john-wick-chapter-4</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg</image:loc>
+      <image:title>John Wick: Chapter 4 Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-19</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -191,8 +371,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-19/mad-max-fury-road</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/8tZYtuWezp8JbcsvHYO0O46tFbo.jpg</image:loc>
+      <image:title>Mad Max: Fury Road Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-20</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -201,8 +391,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-20/gladiator</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg</image:loc>
+      <image:title>Gladiator Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-21</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -211,8 +411,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-21/knives-out</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/pThyQovXQrw2m0s9x82twj48Jq4.jpg</image:loc>
+      <image:title>Knives Out Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-22</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -221,8 +431,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-22/la-la-land</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkVJt0Rf0.jpg</image:loc>
+      <image:title>La La Land Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-23</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -231,8 +451,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-23/the-grand-budapest-hotel</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg</image:loc>
+      <image:title>The Grand Budapest Hotel Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-24</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -241,8 +471,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-24/eternal-sunshine-of-the-spotless-mind</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/5MwkWH9tYHv3mV9OdYTMR5qreIz.jpg</image:loc>
+      <image:title>Eternal Sunshine of the Spotless Mind Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-25</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -251,8 +491,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-25/her</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/eCOtqtfvn7mxGl6nfmq4b1exJRc.jpg</image:loc>
+      <image:title>Her Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-26</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -261,8 +511,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-26/hereditary</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/p9fmuz2Oj3HtEJHG0w8W20sQIuE.jpg</image:loc>
+      <image:title>Hereditary Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-27</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -271,8 +531,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-27/the-shining</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/xazWoLealQwEgqZ89MLZklLZD3k.jpg</image:loc>
+      <image:title>The Shining Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-28</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -281,8 +551,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-28/the-silence-of-the-lambs</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/uS9m8OBk1A8eM9I042bx8rTaIsP.jpg</image:loc>
+      <image:title>The Silence of the Lambs Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-29</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -291,8 +571,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-29/se7en</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/6yoghtyTBoPmuZKiT6HG4nTwh97.jpg</image:loc>
+      <image:title>Se7en Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-30</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -301,8 +591,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-30/shutter-island</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/4GDy0PHYX3VRXUtwK5ysagvkpEj.jpg</image:loc>
+      <image:title>Shutter Island Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-31</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -311,8 +611,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-31/spirited-away</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg</image:loc>
+      <image:title>Spirited Away Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-32</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -321,8 +631,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-32/the-lord-of-the-rings-the-fellowship-of-the-ring</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cDK6.jpg</image:loc>
+      <image:title>The Lord of the Rings: The Fellowship of the Ring Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-33</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -331,8 +651,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-33/the-lord-of-the-rings-the-return-of-the-king</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg</image:loc>
+      <image:title>The Lord of the Rings: The Return of the King Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-34</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -341,8 +671,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-34/inside-out-2</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg</image:loc>
+      <image:title>Inside Out 2 Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-35</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -351,8 +691,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-35/star-wars-a-new-hope</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg</image:loc>
+      <image:title>Star Wars: A New Hope Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-36</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -361,8 +711,438 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-36/1917</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/iZf0KyrE25z1sage4SYFLCCrMi9.jpg</image:loc>
+      <image:title>1917 Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-37</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/k68nPLbIST6NP96JmTxmZijEvCA.jpg</image:loc>
+      <image:title>Tenet (2020)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-37/tenet</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/k68nPLbIST6NP96JmTxmZijEvCA.jpg</image:loc>
+      <image:title>Tenet Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-38</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/ebSnODDg9lbsMIaWg2uAbjn7TO5.jpg</image:loc>
+      <image:title>Dunkirk (2017)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-38/dunkirk</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/ebSnODDg9lbsMIaWg2uAbjn7TO5.jpg</image:loc>
+      <image:title>Dunkirk Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-39</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/bdN3gXu4zB8w79RMB57f5A4h11w.jpg</image:loc>
+      <image:title>The Prestige (2006)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-39/the-prestige</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/bdN3gXu4zB8w79RMB57f5A4h11w.jpg</image:loc>
+      <image:title>The Prestige Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-40</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/yuNs09hvpHVU1cBTCA99x5w2Qyn.jpg</image:loc>
+      <image:title>Memento (2000)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-40/memento</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/yuNs09hvpHVU1cBTCA99x5w2Qyn.jpg</image:loc>
+      <image:title>Memento Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-41</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/x2FJsf1ElAgr63Y3PNPtJrcmpoe.jpg</image:loc>
+      <image:title>Arrival (2016)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-41/arrival</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/x2FJsf1ElAgr63Y3PNPtJrcmpoe.jpg</image:loc>
+      <image:title>Arrival Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-42</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/50LUBZ2A1c2r9k04q.jpg</image:loc>
+      <image:title>Sicario (2015)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-42/sicario</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/50LUBZ2A1c2r9k04q.jpg</image:loc>
+      <image:title>Sicario Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-43</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/7oWY8vdWW7thTzWh3OKYRkWUlD5.jpg</image:loc>
+      <image:title>Django Unchained (2012)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-43/django-unchained</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/7oWY8vdWW7thTzWh3OKYRkWUlD5.jpg</image:loc>
+      <image:title>Django Unchained Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-44</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/7sfbEnaARXDD5Km007Msb29nEH0.jpg</image:loc>
+      <image:title>Inglourious Basterds (2009)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-44/inglourious-basterds</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/7sfbEnaARXDD5Km007Msb29nEH0.jpg</image:loc>
+      <image:title>Inglourious Basterds Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-45</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/v7TaX8kXMXs5yFFGR41guUDNcnB.jpg</image:loc>
+      <image:title>Kill Bill: Vol. 1 (2003)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-45/kill-bill-vol-1</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/v7TaX8kXMXs5yFFGR41guUDNcnB.jpg</image:loc>
+      <image:title>Kill Bill: Vol. 1 Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-46</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/cmyDbF8sPbyf0nC4Gk7BqU2.jpg</image:loc>
+      <image:title>Princess Mononoke (1997)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-46/princess-mononoke</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/cmyDbF8sPbyf0nC4Gk7BqU2.jpg</image:loc>
+      <image:title>Princess Mononoke Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-47</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/6pT91R4eL2m4W2g4N8q.jpg</image:loc>
+      <image:title>Howl&apos;s Moving Castle (2004)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-47/howl-s-moving-castle</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/6pT91R4eL2m4W2g4N8q.jpg</image:loc>
+      <image:title>Howl&apos;s Moving Castle Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-48</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg</image:loc>
+      <image:title>Deadpool &amp; Wolverine (2024)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-48/deadpool-wolverine</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg</image:loc>
+      <image:title>Deadpool &amp; Wolverine Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-49</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/2cxhvwyEwRlysAmRHbtVIQI985z.jpg</image:loc>
+      <image:title>Gladiator II (2024)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-49/gladiator-ii</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/2cxhvwyEwRlysAmRHbtVIQI985z.jpg</image:loc>
+      <image:title>Gladiator II Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-50</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg</image:loc>
+      <image:title>The Batman (2022)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-50/the-batman</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg</image:loc>
+      <image:title>The Batman Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-51</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/b33nnKl1GSFbao8l3urDDgr4YxF.jpg</image:loc>
+      <image:title>Alien: Romulus (2024)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-51/alien-romulus</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/b33nnKl1GSFbao8l3urDDgr4YxF.jpg</image:loc>
+      <image:title>Alien: Romulus Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-52</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/kCGlIMHnOm8JPXq3rXM6c5w9c0T.jpg</image:loc>
+      <image:title>Poor Things (2023)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-52/poor-things</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/kCGlIMHnOm8JPXq3rXM6c5w9c0T.jpg</image:loc>
+      <image:title>Poor Things Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-53</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/w3LxiVYPqRLexPka2rcnh2thCJx.jpg</image:loc>
+      <image:title>Everything Everywhere All at Once (2022)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-53/everything-everywhere-all-at-once</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/w3LxiVYPqRLexPka2rcnh2thCJx.jpg</image:loc>
+      <image:title>Everything Everywhere All at Once Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-54</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg</image:loc>
+      <image:title>Whiplash (2014)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-54/whiplash</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg</image:loc>
+      <image:title>Whiplash Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-55</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg</image:loc>
+      <image:title>Spider-Man: Into the Spider-Verse (2018)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-55/spider-man-into-the-spider-verse</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg</image:loc>
+      <image:title>Spider-Man: Into the Spider-Verse Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-56</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/aKuFiU82s5ISJpGZp7YkIr3kcud.jpg</image:loc>
+      <image:title>Goodfellas (1990)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-56/goodfellas</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/aKuFiU82s5ISJpGZp7YkIr3kcud.jpg</image:loc>
+      <image:title>Goodfellas Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-57</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/yz45KMrAQBtmu5laMRvaziMrVR3.jpg</image:loc>
+      <image:title>Psycho (1960)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-57/psycho</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/yz45KMrAQBtmu5laMRvaziMrVR3.jpg</image:loc>
+      <image:title>Psycho Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-1</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -371,8 +1151,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-1/night-of-the-living-dead</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/en/9/91/Night_of_the_Living_Dead_%281968%29_poster.jpg</image:loc>
+      <image:title>Night of the Living Dead Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-2</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -381,8 +1171,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-2/metropolis</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/en/thumb/9/97/Metropolis_%28German_three-sheet_poster%29.jpg/500px-Metropolis_%28German_three-sheet_poster%29.jpg</image:loc>
+      <image:title>Metropolis Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-3</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -391,8 +1191,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-3/nosferatu</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/en/thumb/9/90/Nosferatu_poster_%28Albin_Grau%2C_1922%29_1.jpg/500px-Nosferatu_poster_%28Albin_Grau%2C_1922%29_1.jpg</image:loc>
+      <image:title>Nosferatu Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-4</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -401,8 +1211,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-4/charade</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Charade_%281963_poster%29.jpg/500px-Charade_%281963_poster%29.jpg</image:loc>
+      <image:title>Charade Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-5</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -411,8 +1231,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-5/the-cabinet-of-dr-caligari</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Das_Cabinet_des_Dr._Caligari.JPG/500px-Das_Cabinet_des_Dr._Caligari.JPG</image:loc>
+      <image:title>The Cabinet of Dr. Caligari Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-6</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -421,8 +1251,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-6/the-phantom-of-the-opera</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Phantom_of_the_opera_1925_poster.jpg/500px-Phantom_of_the_opera_1925_poster.jpg</image:loc>
+      <image:title>The Phantom of the Opera Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-7</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -431,8 +1271,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-7/house-on-haunted-hill</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/House_on_Haunted_Hill.jpg/500px-House_on_Haunted_Hill.jpg</image:loc>
+      <image:title>House on Haunted Hill Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-8</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -441,8 +1291,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-8/the-general</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/The_General_%281926%29_-_Movie_Poster_2.png/500px-The_General_%281926%29_-_Movie_Poster_2.png</image:loc>
+      <image:title>The General Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-9</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -451,8 +1311,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-9/his-girl-friday</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/His_Girl_Friday_%281940_poster%29_crop.jpg/500px-His_Girl_Friday_%281940_poster%29_crop.jpg</image:loc>
+      <image:title>His Girl Friday Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-10</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -461,8 +1331,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-10/the-little-shop-of-horrors</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/The_Little_Shop_of_Horrors_%281960%29_-_Half-Sheet_poster.webp/500px-The_Little_Shop_of_Horrors_%281960%29_-_Half-Sheet_poster.webp.png</image:loc>
+      <image:title>The Little Shop of Horrors Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-11</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -471,8 +1351,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-11/carnival-of-souls</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Carnival_of_Souls_%281962_pressbook_cover%29.jpg/500px-Carnival_of_Souls_%281962_pressbook_cover%29.jpg</image:loc>
+      <image:title>Carnival of Souls Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-12</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -481,8 +1371,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-12/detour</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Detour_%28poster%29.jpg/500px-Detour_%28poster%29.jpg</image:loc>
+      <image:title>Detour Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-13</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -491,8 +1391,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-13/the-gold-rush</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Gold_rush_poster.jpg/500px-Gold_rush_poster.jpg</image:loc>
+      <image:title>The Gold Rush Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-14</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -501,8 +1411,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-14/a-trip-to-the-moon</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/0/04/Le_Voyage_dans_la_lune.jpg</image:loc>
+      <image:title>A Trip to the Moon Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-15</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -511,8 +1431,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-15/white-zombie</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Poster_-_White_Zombie_01_Crisco_restoration.jpg/500px-Poster_-_White_Zombie_01_Crisco_restoration.jpg</image:loc>
+      <image:title>White Zombie Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-16</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -521,8 +1451,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-16/the-last-man-on-earth</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/en/7/73/Lastmanonearth1960s.jpg</image:loc>
+      <image:title>The Last Man on Earth Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-17</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -531,18 +1471,38 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-17/the-stranger</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/The_Stranger_%281946_film_poster%29.jpg/500px-The_Stranger_%281946_film_poster%29.jpg</image:loc>
+      <image:title>The Stranger Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-18</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Gullivers_travel_poster_3.jpg/500px-Gullivers_travel_poster_3.jpg</image:loc>
-      <image:title>Gulliver's Travels (1939)</image:title>
+      <image:title>Gulliver&apos;s Travels (1939)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-18/gulliver-s-travels</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Gullivers_travel_poster_3.jpg/500px-Gullivers_travel_poster_3.jpg</image:loc>
+      <image:title>Gulliver&apos;s Travels Official Hub</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-19</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -551,8 +1511,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-19/sherlock-holmes-and-the-secret-weapon</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/en/4/47/Sherlock_Holmes_and_the_Secret_Weapon_-_1943_-_Poster.png</image:loc>
+      <image:title>Sherlock Holmes and the Secret Weapon Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-20</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -561,8 +1531,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-20/d-o-a</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/D.O.A._%281950_poster%29.jpg/500px-D.O.A._%281950_poster%29.jpg</image:loc>
+      <image:title>D.O.A. Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-21</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -571,8 +1551,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-21/scarlet-street</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Edward_G._Robinson_and_Joan_Bennett_in_%27Scarlet_Street%27%2C_1946.jpg/500px-Edward_G._Robinson_and_Joan_Bennett_in_%27Scarlet_Street%27%2C_1946.jpg</image:loc>
+      <image:title>Scarlet Street Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-22</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -581,8 +1571,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-pd-22/plan-9-from-outer-space</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Plan_9_Alternative_poster.jpg/500px-Plan_9_Alternative_poster.jpg</image:loc>
+      <image:title>Plan 9 from Outer Space Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-up-1</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -591,8 +1591,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-1/avengers-doomsday</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg</image:loc>
+      <image:title>Avengers: Doomsday Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-up-2</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -601,8 +1611,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-2/the-batman-part-ii</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg</image:loc>
+      <image:title>The Batman Part II Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-up-3</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -611,8 +1631,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-3/spider-man-beyond-the-spider-verse</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg</image:loc>
+      <image:title>Spider-Man: Beyond the Spider-Verse Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-up-4</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -621,8 +1651,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-4/the-mandalorian-grogu</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg</image:loc>
+      <image:title>The Mandalorian &amp; Grogu Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-up-5</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -631,8 +1671,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-5/dune-messiah</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg</image:loc>
+      <image:title>Dune: Messiah Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-up-6</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -641,8 +1691,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-6/shrek-5</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/shrek5_poster.jpg</image:loc>
+      <image:title>Shrek 5 Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-up-7</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -651,8 +1711,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-7/avengers-secret-wars</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg</image:loc>
+      <image:title>Avengers: Secret Wars Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-up-8</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -661,8 +1731,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-8/star-wars-starfighter-new-jedi-order</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg</image:loc>
+      <image:title>Star Wars: Starfighter / New Jedi Order Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-up-9</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -671,13 +1751,33 @@
     </image:image>
   </url>
   <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-9/toy-story-5</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/toystory5_poster.jpg</image:loc>
+      <image:title>Toy Story 5 Official Hub</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://jmcinema-phi.vercel.app/movie/mov-up-10</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg</image:loc>
       <image:title>Scream 7 (2027)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jmcinema-phi.vercel.app/movie/mov-up-10/scream-7</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg</image:loc>
+      <image:title>Scream 7 Official Hub</image:title>
     </image:image>
   </url>
 </urlset>

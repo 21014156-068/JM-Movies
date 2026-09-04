@@ -2,14 +2,26 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://jmcinema-phi.vercel.app/sitemap-main.xml</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://jmcinema-phi.vercel.app/sitemap-movies.xml</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://jmcinema-phi.vercel.app/sitemap-collections.xml</loc>
+    <lastmod>2026-09-04</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://jmcinema-phi.vercel.app/sitemap-genres.xml</loc>
+    <lastmod>2026-09-04</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://jmcinema-phi.vercel.app/sitemap-years.xml</loc>
+    <lastmod>2026-09-04</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://jmcinema-phi.vercel.app/sitemap-keywords.xml</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
   </sitemap>
 </sitemapindex>

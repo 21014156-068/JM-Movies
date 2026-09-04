@@ -184,6 +184,8 @@ export const MovieProvider: React.FC<{ children: ReactNode }> = ({ children }) =
             setSearchQuery(segments[1]);
             setActiveTab('home');
           }
+        } else if (path.startsWith('/collections')) {
+          setActiveTab('collections');
         } else if (path === '/upcoming') {
           setActiveTab('upcoming');
         } else if (path === '/public-domain') {

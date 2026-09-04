@@ -25,6 +25,7 @@ import {
   fetchTmdbPerson
 } from './server/tmdb';
 import { SERVER_COLLECTIONS } from './server/collectionsData';
+import { GENRE_LIST } from './server/data/movies';
 
 dotenv.config();
 
@@ -719,9 +720,16 @@ Allow: /year/
 Allow: /upcoming
 Allow: /public-domain
 Allow: /collections
+Allow: /collections/
+Allow: /roulette
+Allow: /battle
+Allow: /trivia
 Allow: /sitemap.xml
 Allow: /sitemap-main.xml
 Allow: /sitemap-movies.xml
+Allow: /sitemap-collections.xml
+Allow: /sitemap-genres.xml
+Allow: /sitemap-years.xml
 Allow: /sitemap-keywords.xml
 Allow: /llms.txt
 Allow: /llms-full.txt
@@ -776,11 +784,14 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# Sitemaps & LLM documentation
+# Master Sitemap Index & Sub-Sitemaps
 Sitemap: ${baseUrl}/sitemap.xml
-Sitemap: ${baseUrl}/sitemap-movies.xml
-Sitemap: ${baseUrl}/sitemap-keywords.xml
 Sitemap: ${baseUrl}/sitemap-main.xml
+Sitemap: ${baseUrl}/sitemap-movies.xml
+Sitemap: ${baseUrl}/sitemap-collections.xml
+Sitemap: ${baseUrl}/sitemap-genres.xml
+Sitemap: ${baseUrl}/sitemap-years.xml
+Sitemap: ${baseUrl}/sitemap-keywords.xml
 LLMs-Txt: ${baseUrl}/llms.txt
 `;
     res.type('text/plain').send(robotsTxt);
@@ -983,6 +994,18 @@ Jamal Movies provides legal free streaming for public domain cinema, official HD
     <lastmod>${today}</lastmod>
   </sitemap>
   <sitemap>
+    <loc>${baseUrl}/sitemap-collections.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>${baseUrl}/sitemap-genres.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>${baseUrl}/sitemap-years.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>
+  <sitemap>
     <loc>${baseUrl}/sitemap-keywords.xml</loc>
     <lastmod>${today}</lastmod>
   </sitemap>
@@ -1000,20 +1023,31 @@ Jamal Movies provides legal free streaming for public domain cinema, official HD
 
     const staticUrls = [
       { loc: `${baseUrl}/`, priority: '1.0', changefreq: 'daily' },
+      { loc: `${baseUrl}/upcoming`, priority: '0.9', changefreq: 'daily' },
+      { loc: `${baseUrl}/public-domain`, priority: '0.9', changefreq: 'daily' },
+      { loc: `${baseUrl}/collections`, priority: '0.9', changefreq: 'daily' },
+      { loc: `${baseUrl}/trending`, priority: '0.9', changefreq: 'daily' },
+      { loc: `${baseUrl}/top-rated`, priority: '0.8', changefreq: 'weekly' },
+      { loc: `${baseUrl}/roulette`, priority: '0.7', changefreq: 'weekly' },
+      { loc: `${baseUrl}/battle`, priority: '0.7', changefreq: 'weekly' },
+      { loc: `${baseUrl}/trivia`, priority: '0.7', changefreq: 'weekly' },
+      { loc: `${baseUrl}/watchlist`, priority: '0.6', changefreq: 'weekly' },
+      { loc: `${baseUrl}/history`, priority: '0.5', changefreq: 'weekly' },
+      { loc: `${baseUrl}/favorites`, priority: '0.6', changefreq: 'weekly' },
       { loc: `${baseUrl}/?view=upcoming`, priority: '0.9', changefreq: 'daily' },
-      { loc: `${baseUrl}/?view=home`, priority: '0.9', changefreq: 'daily' },
-      { loc: `${baseUrl}/?view=explore`, priority: '0.9', changefreq: 'daily' },
-      { loc: `${baseUrl}/?view=public-domain`, priority: '0.9', changefreq: 'weekly' },
-      { loc: `${baseUrl}/?view=collections`, priority: '0.9', changefreq: 'weekly' },
-      { loc: `${baseUrl}/collections`, priority: '0.9', changefreq: 'weekly' },
-      ...SERVER_COLLECTIONS.map(h => ({
-        loc: `${baseUrl}/collections/${h.slug}`,
-        priority: '0.85',
-        changefreq: 'weekly'
-      })),
+      { loc: `${baseUrl}/?view=public-domain`, priority: '0.9', changefreq: 'daily' },
+      { loc: `${baseUrl}/?view=collections`, priority: '0.9', changefreq: 'daily' },
+      { loc: `${baseUrl}/?view=roulette`, priority: '0.7', changefreq: 'weekly' },
+      { loc: `${baseUrl}/?view=battle`, priority: '0.7', changefreq: 'weekly' },
+      { loc: `${baseUrl}/?view=trivia`, priority: '0.7', changefreq: 'weekly' },
       { loc: `${baseUrl}/?category=trending`, priority: '0.8', changefreq: 'daily' },
       { loc: `${baseUrl}/?category=top-rated`, priority: '0.8', changefreq: 'weekly' },
       { loc: `${baseUrl}/?category=upcoming`, priority: '0.8', changefreq: 'daily' },
+      { loc: `${baseUrl}/privacy-policy`, priority: '0.3', changefreq: 'monthly' },
+      { loc: `${baseUrl}/terms`, priority: '0.3', changefreq: 'monthly' },
+      { loc: `${baseUrl}/disclaimer`, priority: '0.3', changefreq: 'monthly' },
+      { loc: `${baseUrl}/dmca`, priority: '0.3', changefreq: 'monthly' },
+      { loc: `${baseUrl}/contact`, priority: '0.4', changefreq: 'monthly' }
     ];
 
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -1029,7 +1063,100 @@ ${staticUrls.map(u => `  <url>
     res.type('application/xml').send(xml);
   });
 
-  // Comprehensive Movies Sitemap with Google Image extensions & Clean URLs
+  // Curated Franchise & Director Hubs Sitemap
+  app.get('/sitemap-collections.xml', (req, res) => {
+    const host = req.get('host') || 'localhost:3000';
+    const protocol = req.protocol === 'https' || req.headers['x-forwarded-proto'] === 'https' ? 'https' : 'http';
+    const baseUrl = `${protocol}://${host}`;
+    const today = new Date().toISOString().split('T')[0];
+
+    const urls = [
+      { loc: `${baseUrl}/collections`, priority: '0.9', changefreq: 'daily' },
+      ...SERVER_COLLECTIONS.flatMap(c => [
+        { loc: `${baseUrl}/collections/${c.slug}`, priority: '0.85', changefreq: 'weekly' },
+        { loc: `${baseUrl}/?view=collections&amp;hub=${encodeURIComponent(c.slug)}`, priority: '0.8', changefreq: 'weekly' }
+      ])
+    ];
+
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map(u => `  <url>
+    <loc>${u.loc}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${u.changefreq}</changefreq>
+    <priority>${u.priority}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+
+    res.type('application/xml').send(xml);
+  });
+
+  // Genres Taxonomy Sitemap
+  app.get('/sitemap-genres.xml', (req, res) => {
+    const host = req.get('host') || 'localhost:3000';
+    const protocol = req.protocol === 'https' || req.headers['x-forwarded-proto'] === 'https' ? 'https' : 'http';
+    const baseUrl = `${protocol}://${host}`;
+    const today = new Date().toISOString().split('T')[0];
+
+    const genreUrls = GENRE_LIST.flatMap(genre => {
+      const enc = encodeURIComponent(genre);
+      return [
+        { loc: `${baseUrl}/genre/${enc}`, priority: '0.8', changefreq: 'weekly' },
+        { loc: `${baseUrl}/?genre=${enc}`, priority: '0.8', changefreq: 'weekly' },
+        { loc: `${baseUrl}/?genre=${enc}&amp;sort=rating`, priority: '0.7', changefreq: 'weekly' },
+        { loc: `${baseUrl}/?genre=${enc}&amp;sort=year`, priority: '0.7', changefreq: 'weekly' },
+        { loc: `${baseUrl}/?genre=${enc}&amp;sort=trending`, priority: '0.7', changefreq: 'weekly' }
+      ];
+    });
+
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${genreUrls.map(u => `  <url>
+    <loc>${u.loc}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${u.changefreq}</changefreq>
+    <priority>${u.priority}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+
+    res.type('application/xml').send(xml);
+  });
+
+  // Year Archives Sitemap (1920-2027)
+  app.get('/sitemap-years.xml', (req, res) => {
+    const host = req.get('host') || 'localhost:3000';
+    const protocol = req.protocol === 'https' || req.headers['x-forwarded-proto'] === 'https' ? 'https' : 'http';
+    const baseUrl = `${protocol}://${host}`;
+    const today = new Date().toISOString().split('T')[0];
+
+    const yearUrls: Array<{ loc: string; priority: string; changefreq: string }> = [];
+    for (let y = 2027; y >= 1920; y--) {
+      yearUrls.push({
+        loc: `${baseUrl}/year/${y}`,
+        priority: y >= 2020 ? '0.8' : '0.6',
+        changefreq: 'monthly'
+      });
+      yearUrls.push({
+        loc: `${baseUrl}/?year=${y}`,
+        priority: y >= 2020 ? '0.7' : '0.5',
+        changefreq: 'monthly'
+      });
+    }
+
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${yearUrls.map(u => `  <url>
+    <loc>${u.loc}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${u.changefreq}</changefreq>
+    <priority>${u.priority}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+
+    res.type('application/xml').send(xml);
+  });
+
+  // Comprehensive Movies Sitemap with Google Image extensions & Dual Permalinks
   app.get('/sitemap-movies.xml', (req, res) => {
     const host = req.get('host') || 'localhost:3000';
     const protocol = req.protocol === 'https' || req.headers['x-forwarded-proto'] === 'https' ? 'https' : 'http';
@@ -1037,20 +1164,35 @@ ${staticUrls.map(u => `  <url>
     const allMovies = db.getAllMovies();
     const today = new Date().toISOString().split('T')[0];
 
-    const movieUrls = allMovies.map(m => {
+    const movieUrls: Array<{ loc: string; lastmod: string; priority: string; changefreq: string; image?: string; title?: string }> = [];
+
+    allMovies.forEach(m => {
       const slug = encodeURIComponent(m.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''));
       const lastmod = (m.updatedAt && m.updatedAt.slice(0, 10) >= '2024-01-01' && m.updatedAt.slice(0, 10) <= today)
         ? m.updatedAt.slice(0, 10)
         : today;
 
-      return {
-        loc: `${baseUrl}/movie/${m.id}/${slug}`,
+      // Canonical permalink
+      movieUrls.push({
+        loc: `${baseUrl}/movie/${m.id}`,
         lastmod,
-        priority: m.rating && m.rating >= 8.0 ? '1.0' : '0.8',
+        priority: m.rating && m.rating >= 8.0 ? '1.0' : '0.9',
         changefreq: 'weekly',
         image: m.poster || m.backdrop,
         title: `${m.title} (${m.releaseYear || 2026})`
-      };
+      });
+
+      // Descriptive slug permalink
+      if (slug) {
+        movieUrls.push({
+          loc: `${baseUrl}/movie/${m.id}/${slug}`,
+          lastmod,
+          priority: '0.85',
+          changefreq: 'weekly',
+          image: m.poster || m.backdrop,
+          title: `${m.title} Official Hub`
+        });
+      }
     });
 
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -1062,7 +1204,7 @@ ${movieUrls.map(u => `  <url>
     <priority>${u.priority}</priority>
     ${u.image ? `<image:image>
       <image:loc>${u.image.replace(/&/g, '&amp;')}</image:loc>
-      <image:title>${u.title.replace(/&/g, '&amp;')}</image:title>
+      <image:title>${(u.title || '').replace(/&/g, '&amp;')}</image:title>
     </image:image>` : ''}
   </url>`).join('\n')}
 </urlset>`;
@@ -1070,7 +1212,7 @@ ${movieUrls.map(u => `  <url>
     res.type('application/xml').send(xml);
   });
 
-  // Keyword Clusters Sitemap for Google Search Rankings
+  // Keyword Clusters Sitemap for Google Search Rankings (Full Coverage - No 500 cap)
   app.get('/sitemap-keywords.xml', (req, res) => {
     const host = req.get('host') || 'localhost:3000';
     const protocol = req.protocol === 'https' || req.headers['x-forwarded-proto'] === 'https' ? 'https' : 'http';
@@ -1081,12 +1223,17 @@ ${movieUrls.map(u => `  <url>
     const uniqueKeywords = new Set<string>();
     allMovies.forEach(m => {
       const kws = generateMovieKeywords(m);
-      kws.slice(0, 10).forEach(kw => uniqueKeywords.add(kw));
+      kws.forEach(kw => {
+        const clean = kw.trim();
+        if (clean.length > 2) {
+          uniqueKeywords.add(clean);
+        }
+      });
     });
 
-    const keywordUrls = Array.from(uniqueKeywords).slice(0, 500).map(kw => ({
-      loc: `${baseUrl}/?search=${encodeURIComponent(kw)}`,
-      priority: '0.7',
+    const keywordUrls = Array.from(uniqueKeywords).map(kw => ({
+      loc: `${baseUrl}/?search=${encodeURIComponent(kw).replace(/&/g, '&amp;')}`,
+      priority: '0.75',
       changefreq: 'weekly'
     }));
 
@@ -1255,6 +1402,9 @@ ${keywordUrls.map(u => `  <url>
         `${baseUrl}/sitemap.xml`,
         `${baseUrl}/sitemap-main.xml`,
         `${baseUrl}/sitemap-movies.xml`,
+        `${baseUrl}/sitemap-collections.xml`,
+        `${baseUrl}/sitemap-genres.xml`,
+        `${baseUrl}/sitemap-years.xml`,
         `${baseUrl}/sitemap-keywords.xml`
       ],
       robotsTxt: `${baseUrl}/robots.txt`,
